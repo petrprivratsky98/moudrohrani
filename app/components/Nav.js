@@ -23,6 +23,7 @@ export function Nav() {
     {href: '#program',  label: 'Program'},
     {href: '#rozvrh',   label: 'Rozvrh'},
     {href: '#kontakt',  label: 'Kontakt'},
+    {href: 'https://moudrohrani.webooker.eu/flutter/', label: 'Rezervační systém', external: true},
   ]
 
   return (
@@ -55,10 +56,13 @@ export function Nav() {
         <div style={{display: 'flex', gap: 'clamp(20px, 2.5vw, 40px)', alignItems: 'center'}}
           className="nav-desktop">
           {links.map(l => (
-            <a key={l.href} href={l.href} style={{
-              fontSize: 13, fontWeight: 700, letterSpacing: '0.08em',
-              textTransform: 'uppercase', textDecoration: 'none', color: C.ink,
-            }}>{l.label}</a>
+            <a key={l.href} href={l.href}
+              {...(l.external ? {target: '_blank', rel: 'noopener noreferrer'} : {})}
+              style={{
+                fontSize: 13, fontWeight: 700, letterSpacing: '0.08em',
+                textTransform: 'uppercase', textDecoration: 'none',
+                color: l.external ? C.orange : C.ink,
+              }}>{l.label}</a>
           ))}
           <a href="#kontakt" style={{
             fontSize: 13, fontWeight: 800, letterSpacing: '0.06em',
@@ -91,11 +95,14 @@ export function Nav() {
       <div className={`nav-mobile-overlay${menuOpen ? ' open' : ''}`}>
         <div style={{display: 'flex', flexDirection: 'column', gap: 4, flex: 1}}>
           {links.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)} style={{
-              fontSize: 'clamp(28px, 7vw, 48px)', fontWeight: 800, color: C.white,
-              textDecoration: 'none', lineHeight: 1.3, letterSpacing: '-0.02em',
-              padding: '8px 0', borderBottom: `1px solid rgba(255,255,255,0.12)`,
-            }}>{l.label}</a>
+            <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
+              {...(l.external ? {target: '_blank', rel: 'noopener noreferrer'} : {})}
+              style={{
+                fontSize: 'clamp(22px, 6vw, 40px)', fontWeight: 800,
+                color: l.external ? C.amber : C.white,
+                textDecoration: 'none', lineHeight: 1.3, letterSpacing: '-0.02em',
+                padding: '8px 0', borderBottom: `1px solid rgba(255,255,255,0.12)`,
+              }}>{l.label}</a>
           ))}
         </div>
         <a href="#kontakt" onClick={() => setMenuOpen(false)} style={{
