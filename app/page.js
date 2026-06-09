@@ -85,27 +85,18 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right: M logo */}
-        <div className="hero-logo" style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          position: 'relative',
-        }}>
-          <div style={{
-            position: 'absolute',
-            width: '85%', paddingBottom: '85%',
-            borderRadius: '50%', background: C.sand,
-          }}/>
+        {/* Right: photo */}
+        <div className="hero-logo" style={{position: 'relative'}}>
           <Image
-            src="/logo-m.png"
-            alt="Moudrohraní"
-            width={480}
-            height={522}
+            src="/uvod.jpeg"
+            alt="Děti při tvoření v Moudrohraní"
+            width={900}
+            height={600}
             style={{
-              width: 'clamp(200px, 38vw, 420px)',
-              height: 'auto',
-              position: 'relative',
-              zIndex: 1,
-              mixBlendMode: 'multiply',
+              width: '100%', height: 'auto',
+              borderRadius: 24,
+              boxShadow: '0 16px 48px rgba(40,30,10,0.13)',
+              display: 'block',
             }}
             priority
           />
