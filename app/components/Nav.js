@@ -14,10 +14,8 @@ export function Nav() {
   }, [])
 
   useEffect(() => {
-    if (!menuOpen) return
-    const close = () => setMenuOpen(false)
-    window.addEventListener('scroll', close, {once: true, passive: true})
-    return () => window.removeEventListener('scroll', close)
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
   const links = [
@@ -36,9 +34,7 @@ export function Nav() {
         height: 68,
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         background: C.white,
-        boxShadow: (scrolled || menuOpen)
-          ? '0 2px 16px rgba(40,30,10,0.1)'
-          : '0 1px 0 rgba(40,30,10,0.06)',
+        boxShadow: scrolled ? '0 2px 16px rgba(40,30,10,0.08)' : '0 1px 0 rgba(40,30,10,0.06)',
         transition: 'box-shadow 0.3s',
       }}>
         <a href="#" onClick={() => setMenuOpen(false)} style={{
@@ -54,9 +50,8 @@ export function Nav() {
           />
         </a>
 
-        {/* Desktop links */}
-        <div style={{display: 'flex', gap: 'clamp(20px, 2.5vw, 40px)', alignItems: 'center'}}
-          className="nav-desktop">
+        {/* Desktop links — display controlled only by CSS class, no inline display */}
+        <div className="nav-desktop">
           {links.map(l => (
             <a key={l.href} href={l.href}
               {...(l.external ? {target: '_blank', rel: 'noopener noreferrer'} : {})}
@@ -75,68 +70,46 @@ export function Nav() {
           }}>Mám zájem ↗</a>
         </div>
 
-        {/* Hamburger */}
+        {/* Hamburger — display controlled only by CSS class */}
         <button
           className="nav-hamburger"
           onClick={() => setMenuOpen(o => !o)}
           aria-label={menuOpen ? 'Zavřít menu' : 'Otevřít menu'}
-          style={{
-            background: 'none', border: 'none', cursor: 'pointer',
-            padding: '8px 4px', display: 'flex', flexDirection: 'column',
-            gap: 5, justifyContent: 'center',
-          }}
         >
-          <span style={{
-            display: 'block', width: 24, height: 2, borderRadius: 2,
-            background: C.ink, transition: 'transform 0.25s, opacity 0.25s',
-            transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none',
-          }}/>
-          <span style={{
-            display: 'block', width: 24, height: 2, borderRadius: 2,
-            background: C.ink, transition: 'opacity 0.25s',
-            opacity: menuOpen ? 0 : 1,
-          }}/>
-          <span style={{
-            display: 'block', width: 24, height: 2, borderRadius: 2,
-            background: C.ink, transition: 'transform 0.25s, opacity 0.25s',
-            transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
-          }}/>
+          <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
+            <rect y="0"    width="28" height="2.5" rx="1.25" fill={C.ink}
+              style={{transition: 'all 0.3s', transformOrigin: '14px 1.25px',
+                transform: menuOpen ? 'rotate(45deg) translate(0,8px)' : 'none'}}/>
+            <rect y="8.75" width="28" height="2.5" rx="1.25" fill={C.ink}
+              style={{transition: 'all 0.3s', opacity: menuOpen ? 0 : 1}}/>
+            <rect y="17.5" width="28" height="2.5" rx="1.25" fill={C.ink}
+              style={{transition: 'all 0.3s', transformOrigin: '14px 18.75px',
+                transform: menuOpen ? 'rotate(-45deg) translate(0,-8px)' : 'none'}}/>
+          </svg>
         </button>
       </nav>
 
-      {/* Dropdown */}
-      <div className={`nav-dropdown${menuOpen ? ' open' : ''}`}>
-        <div style={{padding: '4px clamp(20px, 5vw, 64px) 20px'}}>
+      {/* Mobile full-screen overlay */}
+      <div className={`nav-mobile-overlay${menuOpen ? ' open' : ''}`}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: 4, flex: 1}}>
           {links.map(l => (
             <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
               {...(l.external ? {target: '_blank', rel: 'noopener noreferrer'} : {})}
               style={{
-                display: 'block',
-                fontSize: 16, fontWeight: 700,
-                color: l.external ? C.orange : C.ink,
-                textDecoration: 'none',
-                padding: '13px 0',
-                borderBottom: `1px solid ${C.ink}0d`,
-                letterSpacing: '-0.01em',
+                fontSize: 'clamp(28px, 7vw, 48px)', fontWeight: 800,
+                color: l.external ? C.amber : C.white,
+                textDecoration: 'none', lineHeight: 1.3, letterSpacing: '-0.02em',
+                padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.1)',
               }}>{l.label}</a>
           ))}
-          <a href="#kontakt" onClick={() => setMenuOpen(false)} style={{
-            display: 'inline-flex', alignItems: 'center',
-            marginTop: 18, padding: '13px 28px', borderRadius: 100,
-            background: C.orange, color: C.white,
-            fontSize: 13, fontWeight: 800,
-            textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.08em',
-          }}>Mám zájem ↗</a>
         </div>
+        <a href="#kontakt" onClick={() => setMenuOpen(false)} style={{
+          display: 'inline-flex', alignItems: 'center', marginTop: 32,
+          padding: '18px 36px', borderRadius: 100, background: C.orange,
+          color: C.white, fontSize: 16, fontWeight: 800,
+          textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.08em',
+        }}>Mám zájem ↗</a>
       </div>
-
-      {/* Backdrop */}
-      {menuOpen && (
-        <div onClick={() => setMenuOpen(false)} style={{
-          position: 'fixed', inset: 0, top: 68, zIndex: 498,
-          background: 'rgba(40,30,10,0.12)',
-        }}/>
-      )}
 
       {/* Scroll to top */}
       <button
