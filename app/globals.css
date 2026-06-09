@@ -21,38 +21,30 @@ a {
 }
 
 /* ── Nav responsive ── */
-.nav-desktop { display: flex; }
+.nav-desktop  { display: flex; }
 .nav-hamburger { display: none; }
 
-.nav-mobile-overlay {
+.nav-dropdown {
   position: fixed;
-  inset: 0;
+  top: 68px;
+  left: 0;
+  right: 0;
   z-index: 499;
-  background: #281E0Af2;
-  backdrop-filter: blur(14px);
-  display: flex;
-  flex-direction: column;
-  padding: 100px clamp(24px, 8vw, 80px) 48px;
-  transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #FFFFFF;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.32s;
 }
 
-.nav-mobile-overlay.open {
-  transform: translateX(0);
+.nav-dropdown.open {
+  max-height: 500px;
+  box-shadow: 0 8px 32px rgba(40, 30, 10, 0.1);
 }
 
-@media (max-width: 720px) {
-  .nav-desktop { display: none; }
-  .nav-hamburger { display: block; }
-}
-
-/* ── Nav logo responsive ── */
-.logo-desktop { display: block; }
-.logo-mobile  { display: none;  }
-
-@media (max-width: 720px) {
-  .logo-desktop { display: none;  }
-  .logo-mobile  { display: block; }
+@media (max-width: 1024px) {
+  .nav-desktop  { display: none; }
+  .nav-hamburger { display: flex; }
 }
 
 /* ── Hero stats grid ── */
