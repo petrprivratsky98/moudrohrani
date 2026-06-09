@@ -7,106 +7,108 @@ import {C} from './components/Colors'
 
 // ❋ 001 — Hero
 function Hero() {
-  const facts = [
-    {num: '18m – 4 roky', label: 'Věk dětí'},
-    {num: '1 : 3–4',      label: 'Pedagog na děti'},
-    {num: '2',            label: 'Rodilí mluvčí'},
-    {num: 'Po – Pá',      label: '8:00 – 16:00'},
+  const stats = [
+    {num: '18m – 4r', label: 'Věk dětí'},
+    {num: '1 : 3–4',  label: 'Pedagog / děti'},
+    {num: '2',        label: 'Rodilí mluvčí'},
+    {num: 'Po – Pá',  label: '8:00 – 16:00'},
   ]
   return (
     <section style={{
       minHeight: '100svh', background: C.cream,
-      display: 'flex', flexDirection: 'column', justifyContent: 'center',
-      padding: 'clamp(100px,13vh,160px) clamp(24px,7vw,100px) clamp(64px,8vh,100px)',
+      display: 'flex', alignItems: 'center',
+      padding: 'clamp(88px,12vh,140px) clamp(24px,7vw,100px)',
       position: 'relative', overflow: 'hidden',
     }}>
-      <div style={{
-        position: 'absolute', top: 0, right: 0, bottom: 0,
-        width: '38%', background: C.sand,
-        clipPath: 'polygon(12% 0, 100% 0, 100% 100%, 0% 100%)',
-        pointerEvents: 'none',
-      }}/>
+      <div className="hero-grid" style={{maxWidth: 1200, margin: '0 auto', width: '100%'}}>
 
-      <div style={{maxWidth: 1200, margin: '0 auto', width: '100%', position: 'relative',
-        display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
-        gap: 'clamp(48px,6vw,80px)', alignItems: 'center',
-      }}>
+        {/* Left: text */}
         <div>
           <div style={{
-            fontSize: 12, fontWeight: 700, letterSpacing: '0.2em',
+            fontSize: 11, fontWeight: 700, letterSpacing: '0.22em',
             textTransform: 'uppercase', color: C.orange, marginBottom: 28,
           }}>Praha 6 — Hanspaulka</div>
 
-          <div style={{display: 'flex', alignItems: 'center', gap: 24, marginBottom: 28}}>
-            <Image
-              src="/logo-m.png"
-              alt=""
-              width={90}
-              height={98}
-              style={{width: 'clamp(60px, 7vw, 90px)', height: 'auto', flexShrink: 0}}
-            />
-            <h1 style={{
-              fontSize: 'clamp(34px,5vw,72px)', fontWeight: 900,
-              color: C.ink, lineHeight: 1.0, letterSpacing: '-0.03em', margin: 0,
-            }}>
-              Anglicko-česká<br/>
-              <span style={{color: C.orange}}>školička</span><br/>
-              v Hanspaulce.
-            </h1>
-          </div>
+          <h1 style={{
+            fontSize: 'clamp(40px,5.5vw,76px)', fontWeight: 900,
+            color: C.ink, lineHeight: 1.0, letterSpacing: '-0.03em', marginBottom: 28,
+          }}>
+            Anglicko&#8209;česká<br/>školička<br/>
+            <span style={{color: C.orange}}>v Hanspaulce.</span>
+          </h1>
 
           <p style={{
-            fontSize: 'clamp(17px,1.6vw,21px)', color: C.muted,
-            lineHeight: 1.7, maxWidth: 480, marginBottom: 44,
+            fontSize: 'clamp(16px,1.5vw,19px)', color: C.muted,
+            lineHeight: 1.75, maxWidth: 440, marginBottom: 40,
           }}>
-            Místo, kde se děti od 18 měsíců do 4 let učí anglicky, pohybují,
-            tvoří a — především — radují. Každý den od pondělí do pátku.
+            Místo, kde se děti od 18 měsíců do 4 let učí anglicky,
+            pohybují, tvoří — a především radují.
           </p>
 
-          <div style={{display: 'flex', gap: 14, flexWrap: 'wrap'}}>
+          <div style={{display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48}}>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
-              padding: '16px 32px', borderRadius: 100,
+              padding: '15px 30px', borderRadius: 100,
               background: C.orange, color: C.white,
-              fontSize: 14, fontWeight: 800,
+              fontSize: 13, fontWeight: 800,
               textTransform: 'uppercase', letterSpacing: '0.1em',
               boxShadow: `0 6px 24px ${C.orange}44`,
               textDecoration: 'none',
             }}>Chci místo ↗</a>
             <a href="#o-skolce" style={{
               display: 'inline-flex', alignItems: 'center',
-              padding: '16px 32px', borderRadius: 100,
-              border: `2px solid ${C.ink}18`, color: C.ink,
-              fontSize: 14, fontWeight: 700,
+              padding: '15px 30px', borderRadius: 100,
+              border: `2px solid ${C.ink}15`, color: C.ink,
+              fontSize: 13, fontWeight: 700,
               textTransform: 'uppercase', letterSpacing: '0.1em',
               textDecoration: 'none',
             }}>Zjistit víc</a>
           </div>
+
+          {/* Stats row */}
+          <div style={{
+            display: 'flex', gap: 0,
+            borderTop: `1px solid ${C.ink}10`,
+            paddingTop: 28,
+          }}>
+            {stats.map(({num, label}, i) => (
+              <div key={label} style={{
+                flex: 1,
+                paddingRight: i < stats.length - 1 ? 24 : 0,
+                borderRight: i < stats.length - 1 ? `1px solid ${C.ink}10` : 'none',
+                marginRight: i < stats.length - 1 ? 24 : 0,
+              }}>
+                <div style={{fontSize: 'clamp(16px,1.6vw,22px)', fontWeight: 900, color: C.ink, letterSpacing: '-0.02em'}}>{num}</div>
+                <div style={{fontSize: 11, fontWeight: 600, color: C.muted, textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4}}>{label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Facts panel */}
-        <div style={{
-          background: C.white, borderRadius: 24,
-          padding: 'clamp(32px,3.5vw,48px)',
-          boxShadow: '0 4px 40px rgba(40,30,10,0.07)',
-          display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0,
+        {/* Right: M logo */}
+        <div className="hero-logo" style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          position: 'relative',
         }}>
-          {facts.map(({num, label}, i) => (
-            <div key={label} style={{
-              padding: 'clamp(20px,2vw,28px)',
-              borderRight: i % 2 === 0 ? `1px solid ${C.ink}08` : 'none',
-              borderBottom: i < 2 ? `1px solid ${C.ink}08` : 'none',
-            }}>
-              <div style={{
-                fontSize: 'clamp(22px,2.2vw,32px)', fontWeight: 900,
-                color: C.orange, letterSpacing: '-0.03em', marginBottom: 6,
-              }}>{num}</div>
-              <div style={{
-                fontSize: 13, fontWeight: 600, color: C.muted,
-                textTransform: 'uppercase', letterSpacing: '0.1em',
-              }}>{label}</div>
-            </div>
-          ))}
+          <div style={{
+            position: 'absolute',
+            width: '85%', paddingBottom: '85%',
+            borderRadius: '50%', background: C.sand,
+          }}/>
+          <Image
+            src="/logo-m.png"
+            alt="Moudrohraní"
+            width={480}
+            height={522}
+            style={{
+              width: 'clamp(200px, 38vw, 420px)',
+              height: 'auto',
+              position: 'relative',
+              zIndex: 1,
+              filter: 'drop-shadow(0 12px 32px rgba(40,30,10,0.12))',
+            }}
+            priority
+          />
         </div>
       </div>
     </section>

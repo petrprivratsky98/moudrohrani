@@ -45,3 +45,20 @@ a {
   .nav-desktop { display: none; }
   .nav-hamburger { display: block; }
 }
+
+/* ── Hero responsive ── */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-logo {
+    display: none;
+  }
+}
