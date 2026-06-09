@@ -439,8 +439,8 @@ export default function Home() {
         <Hero />
         <OShkolce />
         <Program />
-        <Tym />
         <Rozvrh />
+        <Tym />
         <Kontakt />
       </main>
       <Footer />
