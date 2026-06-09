@@ -15,50 +15,66 @@ function Hero() {
   ]
   return (
     <section style={{
-      minHeight: '100svh', background: C.cream,
+      minHeight: '100svh', position: 'relative', overflow: 'hidden',
       display: 'flex', alignItems: 'center',
-      padding: 'clamp(88px,12vh,140px) clamp(24px,7vw,100px)',
-      position: 'relative', overflow: 'hidden',
     }}>
-      <div className="hero-grid" style={{maxWidth: 1200, margin: '0 auto', width: '100%'}}>
+      {/* Background photo */}
+      <Image
+        src="/uvod.jpeg"
+        alt=""
+        fill
+        style={{objectFit: 'cover', objectPosition: 'center 30%'}}
+        priority
+      />
 
-        {/* Left: text */}
-        <div>
+      {/* Gradient overlay — darker on left for text, lighter on right */}
+      <div style={{
+        position: 'absolute', inset: 0,
+        background: 'linear-gradient(100deg, rgba(30,20,5,0.82) 0%, rgba(30,20,5,0.55) 55%, rgba(30,20,5,0.25) 100%)',
+      }}/>
+
+      {/* Content */}
+      <div style={{
+        position: 'relative', zIndex: 1,
+        maxWidth: 1200, margin: '0 auto', width: '100%',
+        padding: 'clamp(100px,13vh,160px) clamp(24px,7vw,100px)',
+      }}>
+        <div style={{maxWidth: 620}}>
           <div style={{
             fontSize: 11, fontWeight: 700, letterSpacing: '0.22em',
-            textTransform: 'uppercase', color: C.orange, marginBottom: 28,
+            textTransform: 'uppercase', color: C.amber, marginBottom: 28,
           }}>Praha 6 — Hanspaulka</div>
 
           <h1 style={{
             fontSize: 'clamp(40px,5.5vw,76px)', fontWeight: 900,
-            color: C.ink, lineHeight: 1.0, letterSpacing: '-0.03em', marginBottom: 28,
+            color: C.white, lineHeight: 1.0, letterSpacing: '-0.03em', marginBottom: 28,
           }}>
             Anglicko&#8209;česká<br/>školička<br/>
-            <span style={{color: C.orange}}>v Hanspaulce.</span>
+            <span style={{color: C.amber}}>v Hanspaulce.</span>
           </h1>
 
           <p style={{
-            fontSize: 'clamp(16px,1.5vw,19px)', color: C.muted,
-            lineHeight: 1.75, maxWidth: 440, marginBottom: 40,
+            fontSize: 'clamp(16px,1.5vw,19px)', color: 'rgba(255,255,255,0.8)',
+            lineHeight: 1.75, maxWidth: 460, marginBottom: 40,
           }}>
             Místo, kde se děti od 18 měsíců do 4 let učí anglicky,
             pohybují, tvoří — a především radují.
           </p>
 
-          <div style={{display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48}}>
+          <div style={{display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 56}}>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '15px 30px', borderRadius: 100,
               background: C.orange, color: C.white,
               fontSize: 13, fontWeight: 800,
               textTransform: 'uppercase', letterSpacing: '0.1em',
-              boxShadow: `0 6px 24px ${C.orange}44`,
+              boxShadow: `0 6px 24px ${C.orange}55`,
               textDecoration: 'none',
             }}>Chci místo ↗</a>
             <a href="#o-skolce" style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '15px 30px', borderRadius: 100,
-              border: `2px solid ${C.ink}15`, color: C.ink,
+              border: '2px solid rgba(255,255,255,0.35)', color: C.white,
               fontSize: 13, fontWeight: 700,
               textTransform: 'uppercase', letterSpacing: '0.1em',
               textDecoration: 'none',
@@ -67,39 +83,22 @@ function Hero() {
 
           {/* Stats row */}
           <div style={{
-            display: 'flex', gap: 0,
-            borderTop: `1px solid ${C.ink}10`,
+            display: 'flex', gap: 0, flexWrap: 'wrap',
+            borderTop: '1px solid rgba(255,255,255,0.2)',
             paddingTop: 28,
           }}>
             {stats.map(({num, label}, i) => (
               <div key={label} style={{
-                flex: 1,
-                paddingRight: i < stats.length - 1 ? 24 : 0,
-                borderRight: i < stats.length - 1 ? `1px solid ${C.ink}10` : 'none',
-                marginRight: i < stats.length - 1 ? 24 : 0,
+                paddingRight: i < stats.length - 1 ? 28 : 0,
+                borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.2)' : 'none',
+                marginRight: i < stats.length - 1 ? 28 : 0,
+                marginBottom: 12,
               }}>
-                <div style={{fontSize: 'clamp(14px,1.3vw,17px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em'}}>{num}</div>
-                <div style={{fontSize: 12, fontWeight: 500, color: C.muted, marginTop: 3}}>{label}</div>
+                <div style={{fontSize: 'clamp(14px,1.3vw,17px)', fontWeight: 800, color: C.white, letterSpacing: '-0.01em'}}>{num}</div>
+                <div style={{fontSize: 12, fontWeight: 500, color: 'rgba(255,255,255,0.6)', marginTop: 3}}>{label}</div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Right: photo */}
-        <div className="hero-logo" style={{position: 'relative'}}>
-          <Image
-            src="/uvod.jpeg"
-            alt="Děti při tvoření v Moudrohraní"
-            width={900}
-            height={600}
-            style={{
-              width: '100%', height: 'auto',
-              borderRadius: 24,
-              boxShadow: '0 16px 48px rgba(40,30,10,0.13)',
-              display: 'block',
-            }}
-            priority
-          />
         </div>
       </div>
     </section>
