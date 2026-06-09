@@ -83,18 +83,12 @@ function Hero() {
           </div>
 
           {/* Stats row */}
-          <div style={{
-            display: 'flex', gap: 0, flexWrap: 'wrap',
+          <div className="stats-grid" style={{
             borderTop: '1px solid rgba(255,255,255,0.2)',
             paddingTop: 28,
           }}>
-            {stats.map(({num, label}, i) => (
-              <div key={label} style={{
-                paddingRight: i < stats.length - 1 ? 32 : 0,
-                borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.2)' : 'none',
-                marginRight: i < stats.length - 1 ? 32 : 0,
-                marginBottom: 12,
-              }}>
+            {stats.map(({num, label}) => (
+              <div key={label}>
                 <div style={{fontSize: 'clamp(17px,1.6vw,21px)', fontWeight: 800, color: C.white, letterSpacing: '-0.01em'}}>{num}</div>
                 <div style={{fontSize: 13, fontWeight: 500, color: 'rgba(255,255,255,0.6)', marginTop: 4}}>{label}</div>
               </div>

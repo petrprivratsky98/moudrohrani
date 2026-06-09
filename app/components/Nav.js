@@ -47,6 +47,16 @@ export function Nav() {
             width={198}
             style={{height: 'clamp(28px, 2.6vw, 36px)', width: 'auto'}}
             priority
+            className="logo-desktop"
+          />
+          <Image
+            src="/logo-m.png"
+            alt="Moudrohraní"
+            height={36}
+            width={36}
+            style={{height: 36, width: 36}}
+            priority
+            className="logo-mobile"
           />
         </a>
 

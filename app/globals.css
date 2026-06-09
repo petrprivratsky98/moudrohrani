@@ -46,6 +46,30 @@ a {
   .nav-hamburger { display: block; }
 }
 
+/* ── Nav logo responsive ── */
+.logo-desktop { display: block; }
+.logo-mobile  { display: none;  }
+
+@media (max-width: 720px) {
+  .logo-desktop { display: none;  }
+  .logo-mobile  { display: block; }
+}
+
+/* ── Hero stats grid ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: 0 32px;
+}
+
+@media (max-width: 560px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+  }
+}
+
 /* ── Hero responsive ── */
 .hero-grid {
   display: grid;
