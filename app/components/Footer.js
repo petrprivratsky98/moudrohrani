@@ -1,4 +1,10 @@
+import Image from 'next/image'
 import {C} from './Colors'
+
+const socials = [
+  {href: 'https://www.facebook.com/moudrohrani', src: '/fb.png', alt: 'Facebook'},
+  {href: 'https://www.instagram.com/moudrohrani', src: '/ig.png', alt: 'Instagram'},
+]
 
 export function Footer() {
   return (
@@ -45,9 +51,20 @@ export function Footer() {
           </div>
         </div>
         <div style={{height: 1, background: `${C.white}10`, marginBottom: 24}}/>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12}}>
           <span style={{fontSize: 12, color: `${C.white}33`}}>© {new Date().getFullYear()} Moudrohraní. Všechna práva vyhrazena.</span>
-          <span style={{fontSize: 12, color: `${C.white}22`}}>IČO: 10799427</span>
+          <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+            {socials.map(({href, src, alt}) => (
+              <a key={alt} href={href} target="_blank" rel="noopener noreferrer"
+                style={{opacity: 0.4, transition: 'opacity 0.2s'}}
+                onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '0.4'}
+              >
+                <Image src={src} alt={alt} width={20} height={20} style={{display: 'block'}} />
+              </a>
+            ))}
+            <span style={{fontSize: 12, color: `${C.white}22`}}>IČO: 10799427</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -66,7 +66,7 @@ export function Nav() {
             fontSize: 13, fontWeight: 800, letterSpacing: '0.06em',
             textTransform: 'uppercase', padding: '10px 22px', borderRadius: 100,
             background: C.orange, color: C.white, textDecoration: 'none',
-          }}>Chci místo ↗</a>
+          }}>Mám zájem ↗</a>
         </div>
 
         {/* Hamburger */}
@@ -89,6 +89,26 @@ export function Nav() {
         </button>
       </nav>
 
+      {/* Scroll to top */}
+      <button
+        onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+        aria-label="Zpět nahoru"
+        style={{
+          position: 'fixed', bottom: 32, right: 32, zIndex: 400,
+          width: 48, height: 48, borderRadius: '50%',
+          background: C.orange, border: 'none', cursor: 'pointer',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          boxShadow: '0 4px 20px rgba(40,30,10,0.18)',
+          opacity: scrolled ? 1 : 0,
+          pointerEvents: scrolled ? 'auto' : 'none',
+          transition: 'opacity 0.3s',
+        }}
+      >
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M9 14V4M9 4L4 9M9 4l5 5" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+
       {/* Mobile overlay */}
       <div className={`nav-mobile-overlay${menuOpen ? ' open' : ''}`}>
         <div style={{display: 'flex', flexDirection: 'column', gap: 4, flex: 1}}>
@@ -108,7 +128,7 @@ export function Nav() {
           padding: '18px 36px', borderRadius: 100, background: C.orange,
           color: C.white, fontSize: 16, fontWeight: 800,
           textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.08em',
-        }}>Chci místo ↗</a>
+        }}>Mám zájem ↗</a>
       </div>
     </>
   )

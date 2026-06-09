@@ -3,6 +3,7 @@ import {useState} from 'react'
 import Image from 'next/image'
 import {Nav} from './components/Nav'
 import {Footer} from './components/Footer'
+import {Tym} from './components/Tym'
 import {C} from './components/Colors'
 
 // ❋ 001 — Hero
@@ -438,6 +439,7 @@ export default function Home() {
         <Hero />
         <OShkolce />
         <Program />
+        <Tym />
         <Rozvrh />
         <Kontakt />
       </main>
