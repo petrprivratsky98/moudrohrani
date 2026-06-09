@@ -1,5 +1,6 @@
 'use client'
 import {useState} from 'react'
+import Image from 'next/image'
 import {Nav} from './components/Nav'
 import {Footer} from './components/Footer'
 import {C} from './components/Colors'
@@ -33,17 +34,26 @@ function Hero() {
         <div>
           <div style={{
             fontSize: 12, fontWeight: 700, letterSpacing: '0.2em',
-            textTransform: 'uppercase', color: C.orange, marginBottom: 24,
+            textTransform: 'uppercase', color: C.orange, marginBottom: 28,
           }}>Praha 6 — Hanspaulka</div>
 
-          <h1 style={{
-            fontSize: 'clamp(44px,6.5vw,88px)', fontWeight: 900,
-            color: C.ink, lineHeight: 1.0, letterSpacing: '-0.03em', marginBottom: 28,
-          }}>
-            Anglicko-česká<br/>
-            <span style={{color: C.orange}}>školička</span><br/>
-            v Hanspaulce.
-          </h1>
+          <div style={{display: 'flex', alignItems: 'center', gap: 24, marginBottom: 28}}>
+            <Image
+              src="/logo-m.png"
+              alt=""
+              width={90}
+              height={98}
+              style={{width: 'clamp(60px, 7vw, 90px)', height: 'auto', flexShrink: 0}}
+            />
+            <h1 style={{
+              fontSize: 'clamp(34px,5vw,72px)', fontWeight: 900,
+              color: C.ink, lineHeight: 1.0, letterSpacing: '-0.03em', margin: 0,
+            }}>
+              Anglicko-česká<br/>
+              <span style={{color: C.orange}}>školička</span><br/>
+              v Hanspaulce.
+            </h1>
+          </div>
 
           <p style={{
             fontSize: 'clamp(17px,1.6vw,21px)', color: C.muted,

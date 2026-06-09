@@ -1,5 +1,6 @@
 'use client'
 import {useState, useEffect} from 'react'
+import Image from 'next/image'
 import {C} from './Colors'
 
 export function Nav() {
@@ -38,16 +39,16 @@ export function Nav() {
         transition: 'all 0.3s',
       }}>
         <a href="#" onClick={() => setMenuOpen(false)} style={{
-          textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1.2,
+          textDecoration: 'none', display: 'flex', alignItems: 'center',
         }}>
-          <span style={{
-            fontSize: 'clamp(18px, 1.5vw, 23px)', fontWeight: 900,
-            letterSpacing: '-0.02em', color: C.orange,
-          }}>Moudrohraní</span>
-          <span style={{
-            fontSize: 'clamp(9px, 0.65vw, 10px)', fontWeight: 600,
-            letterSpacing: '0.18em', textTransform: 'uppercase', color: C.muted,
-          }}>Anglicko-česká školička</span>
+          <Image
+            src="/logo-text.png"
+            alt="Moudrohraní"
+            height={36}
+            width={198}
+            style={{height: 'clamp(28px, 2.6vw, 36px)', width: 'auto'}}
+            priority
+          />
         </a>
 
         {/* Desktop */}
