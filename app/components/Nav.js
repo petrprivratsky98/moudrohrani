@@ -33,11 +33,9 @@ export function Nav() {
         padding: '0 clamp(20px, 5vw, 64px)',
         height: 68,
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        background: scrolled ? C.white : 'rgba(255,254,248,0.85)',
-        backdropFilter: 'blur(12px)',
-        boxShadow: scrolled ? '0 2px 16px rgba(40,30,10,0.08)' : 'none',
-        borderBottom: scrolled ? `1px solid rgba(40,30,10,0.06)` : '1px solid transparent',
-        transition: 'all 0.3s',
+        background: C.white,
+        boxShadow: scrolled ? '0 2px 16px rgba(40,30,10,0.08)' : '0 1px 0 rgba(40,30,10,0.06)',
+        transition: 'box-shadow 0.3s',
       }}>
         <a href="#" onClick={() => setMenuOpen(false)} style={{
           textDecoration: 'none', display: 'flex', alignItems: 'center',

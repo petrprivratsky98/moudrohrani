@@ -46,36 +46,36 @@ function Hero() {
           }}>Praha 6 — Hanspaulka</div>
 
           <h1 style={{
-            fontSize: 'clamp(40px,5.5vw,76px)', fontWeight: 900,
+            fontSize: 'clamp(42px,5.8vw,80px)', fontWeight: 900,
             color: C.white, lineHeight: 1.0, letterSpacing: '-0.03em', marginBottom: 28,
           }}>
-            Anglicko&#8209;česká<br/>školička<br/>
+            Anglicko-česká<br/>školička<br/>
             <span style={{color: C.amber}}>v Hanspaulce.</span>
           </h1>
 
           <p style={{
-            fontSize: 'clamp(16px,1.5vw,19px)', color: 'rgba(255,255,255,0.8)',
+            fontSize: 'clamp(17px,1.6vw,21px)', color: 'rgba(255,255,255,0.82)',
             lineHeight: 1.75, maxWidth: 460, marginBottom: 40,
           }}>
             Místo, kde se děti od 18 měsíců do 4 let učí anglicky,
-            pohybují, tvoří — a především radují.
+            pohybují, tvoří a především radují.
           </p>
 
           <div style={{display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 56}}>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
-              padding: '15px 30px', borderRadius: 100,
+              padding: '16px 32px', borderRadius: 100,
               background: C.orange, color: C.white,
-              fontSize: 13, fontWeight: 800,
+              fontSize: 14, fontWeight: 800,
               textTransform: 'uppercase', letterSpacing: '0.1em',
               boxShadow: `0 6px 24px ${C.orange}55`,
               textDecoration: 'none',
-            }}>Chci místo ↗</a>
+            }}>Mám zájem ↗</a>
             <a href="#o-skolce" style={{
               display: 'inline-flex', alignItems: 'center',
-              padding: '15px 30px', borderRadius: 100,
+              padding: '16px 32px', borderRadius: 100,
               border: '2px solid rgba(255,255,255,0.35)', color: C.white,
-              fontSize: 13, fontWeight: 700,
+              fontSize: 14, fontWeight: 700,
               textTransform: 'uppercase', letterSpacing: '0.1em',
               textDecoration: 'none',
             }}>Zjistit víc</a>
@@ -89,13 +89,13 @@ function Hero() {
           }}>
             {stats.map(({num, label}, i) => (
               <div key={label} style={{
-                paddingRight: i < stats.length - 1 ? 28 : 0,
+                paddingRight: i < stats.length - 1 ? 32 : 0,
                 borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.2)' : 'none',
-                marginRight: i < stats.length - 1 ? 28 : 0,
+                marginRight: i < stats.length - 1 ? 32 : 0,
                 marginBottom: 12,
               }}>
-                <div style={{fontSize: 'clamp(14px,1.3vw,17px)', fontWeight: 800, color: C.white, letterSpacing: '-0.01em'}}>{num}</div>
-                <div style={{fontSize: 12, fontWeight: 500, color: 'rgba(255,255,255,0.6)', marginTop: 3}}>{label}</div>
+                <div style={{fontSize: 'clamp(17px,1.6vw,21px)', fontWeight: 800, color: C.white, letterSpacing: '-0.01em'}}>{num}</div>
+                <div style={{fontSize: 13, fontWeight: 500, color: 'rgba(255,255,255,0.6)', marginTop: 4}}>{label}</div>
               </div>
             ))}
           </div>
@@ -127,33 +127,32 @@ function OShkolce() {
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>O školce</div>
             <h2 style={{
-              fontSize: 'clamp(32px,4vw,56px)', fontWeight: 900,
+              fontSize: 'clamp(34px,4vw,58px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
             }}>
               Jsme anglicko-česká školička<br/>pro děti od 18 měsíců do 4 let.
             </h2>
             <p style={{
-              fontSize: 'clamp(16px,1.5vw,19px)', color: C.muted,
+              fontSize: 'clamp(17px,1.6vw,20px)', color: C.muted,
               lineHeight: 1.75, margin: 0,
             }}>
               Nacházíme se v klidném prostředí pražské Hanspaulky, blízko lesů a dětských hřišť.
-              V případě zájmu nebo s aktuálním obsahem vás rádi pozveme na ukázkový program,
-              který je zdarma a je určen pro děti i rodiče.
+              V případě zájmu vás rádi pozveme na ukázkový program zdarma, určený pro děti i rodiče.
             </p>
           </div>
 
           <div style={{display: 'flex', flexDirection: 'column', gap: 0}}>
             {points.map(({title, text}, i) => (
               <div key={title} style={{
-                paddingTop: i === 0 ? 0 : 28,
-                paddingBottom: i < points.length - 1 ? 28 : 0,
+                paddingTop: i === 0 ? 0 : 30,
+                paddingBottom: i < points.length - 1 ? 30 : 0,
                 borderBottom: i < points.length - 1 ? `1px solid ${C.ink}10` : 'none',
               }}>
                 <div style={{
-                  fontSize: 16, fontWeight: 800, color: C.ink,
+                  fontSize: 18, fontWeight: 800, color: C.ink,
                   marginBottom: 8, letterSpacing: '-0.01em',
                 }}>{title}</div>
-                <p style={{fontSize: 15, color: C.muted, lineHeight: 1.7, margin: 0}}>{text}</p>
+                <p style={{fontSize: 16, color: C.muted, lineHeight: 1.7, margin: 0}}>{text}</p>
               </div>
             ))}
           </div>
@@ -189,7 +188,7 @@ function Program() {
               Co děti čeká každý den.
             </h2>
           </div>
-          <p style={{fontSize: 17, color: C.muted, lineHeight: 1.65, maxWidth: 380, margin: 0}}>
+          <p style={{fontSize: 18, color: C.muted, lineHeight: 1.65, maxWidth: 380, margin: 0}}>
             Certifikovaný program PlayWay pro výuku angličtiny doplňují pohybové, výtvarné a hudební aktivity.
           </p>
         </div>
@@ -198,14 +197,14 @@ function Program() {
           {items.map(({num, title, text}) => (
             <div key={num} style={{
               background: C.white,
-              padding: 'clamp(28px,3vw,40px)',
+              padding: 'clamp(28px,3vw,44px)',
             }}>
               <div style={{
                 fontSize: 11, fontWeight: 700, letterSpacing: '0.15em',
                 color: C.orange, marginBottom: 14,
               }}>{num}</div>
-              <div style={{fontSize: 18, fontWeight: 800, color: C.ink, marginBottom: 12, letterSpacing: '-0.01em'}}>{title}</div>
-              <p style={{fontSize: 15, color: C.muted, lineHeight: 1.7, margin: 0}}>{text}</p>
+              <div style={{fontSize: 19, fontWeight: 800, color: C.ink, marginBottom: 12, letterSpacing: '-0.01em'}}>{title}</div>
+              <p style={{fontSize: 16, color: C.muted, lineHeight: 1.7, margin: 0}}>{text}</p>
             </div>
           ))}
         </div>
@@ -248,18 +247,17 @@ function Rozvrh() {
               Jak probíhá<br/>každý den?
             </h2>
             <p style={{
-              fontSize: 'clamp(16px,1.5vw,19px)', color: 'rgba(255,255,255,0.75)',
-              lineHeight: 1.75, marginBottom: 28, maxWidth: 400,
+              fontSize: 'clamp(17px,1.6vw,20px)', color: 'rgba(255,255,255,0.8)',
+              lineHeight: 1.75, marginBottom: 24, maxWidth: 400,
             }}>
               Program probíhá od pondělí do pátku od 8:00 do 13:00.
               V případě zájmu je možnost docházky do 16:00.
             </p>
             <p style={{
-              fontSize: 15, color: 'rgba(255,255,255,0.55)',
+              fontSize: 16, color: 'rgba(255,255,255,0.6)',
               lineHeight: 1.65, margin: '0 0 40px',
             }}>
-              Časový harmonogram je orientační —<br/>
-              přizpůsobujeme ho potřebám dětí a situaci.
+              Časový harmonogram je orientační — přizpůsobujeme ho potřebám dětí a situaci.
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
@@ -283,10 +281,10 @@ function Rozvrh() {
                 marginBottom: i < activities.length - 1 ? 18 : 0,
               }}>
                 <div style={{
-                  fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.6)',
-                  minWidth: 96, paddingTop: 2, flexShrink: 0, letterSpacing: '0.02em',
+                  fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.65)',
+                  minWidth: 104, paddingTop: 2, flexShrink: 0, letterSpacing: '0.02em',
                 }}>{time}</div>
-                <div style={{fontSize: 15, color: C.white, lineHeight: 1.45}}>{label}</div>
+                <div style={{fontSize: 16, color: C.white, lineHeight: 1.45}}>{label}</div>
               </div>
             ))}
           </div>

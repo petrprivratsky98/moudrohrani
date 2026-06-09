@@ -1,8 +1,8 @@
 export const C = {
   cream:  '#FFFEF8',
   sand:   '#FEF3E2',
-  orange: '#F09428',
-  amber:  '#FFB830',
+  orange: '#D97820',
+  amber:  '#F5A830',
   green:  '#52A870',
   ink:    '#281E0A',
   muted:  '#7B6E58',
