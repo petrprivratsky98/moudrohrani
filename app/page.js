@@ -8,10 +8,10 @@ import {C} from './components/Colors'
 // ❋ 001 — Hero
 function Hero() {
   const stats = [
-    {num: '18m – 4r', label: 'Věk dětí'},
-    {num: '1 : 3–4',  label: 'Pedagog / děti'},
-    {num: '2',        label: 'Rodilí mluvčí'},
-    {num: 'Po – Pá',  label: '8:00 – 16:00'},
+    {num: 'od 18 měsíců', label: 'do 4 let věku'},
+    {num: 'max. 10 dětí', label: 've skupině'},
+    {num: '2 rodilí',     label: 'mluvčí'},
+    {num: 'Po – Pá',      label: '8:00 – 16:00'},
   ]
   return (
     <section style={{
@@ -78,8 +78,8 @@ function Hero() {
                 borderRight: i < stats.length - 1 ? `1px solid ${C.ink}10` : 'none',
                 marginRight: i < stats.length - 1 ? 24 : 0,
               }}>
-                <div style={{fontSize: 'clamp(16px,1.6vw,22px)', fontWeight: 900, color: C.ink, letterSpacing: '-0.02em'}}>{num}</div>
-                <div style={{fontSize: 11, fontWeight: 600, color: C.muted, textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4}}>{label}</div>
+                <div style={{fontSize: 'clamp(14px,1.3vw,17px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em'}}>{num}</div>
+                <div style={{fontSize: 12, fontWeight: 500, color: C.muted, marginTop: 3}}>{label}</div>
               </div>
             ))}
           </div>
@@ -105,7 +105,7 @@ function Hero() {
               height: 'auto',
               position: 'relative',
               zIndex: 1,
-              filter: 'drop-shadow(0 12px 32px rgba(40,30,10,0.12))',
+              mixBlendMode: 'multiply',
             }}
             priority
           />
