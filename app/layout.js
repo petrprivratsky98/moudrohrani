@@ -7,8 +7,8 @@ const font = Plus_Jakarta_Sans({
 })
 
 export const metadata = {
-  title: 'Moudrohraní — Anglicko-česká školička',
-  description: 'Anglicko-česká školička pro děti od 18 měsíců do 4 let v Praze 6 — Hanspaulce. English, jóga, výtvarné tvoření, hudba a radost z objevování.',
+  title: 'Moudrohraní — Dětská skupina Praha 6',
+  description: 'Dětská skupina pro děti od 1,5 do 3 let v Praze 6 — Hanspaulce. Respektující přístup, citlivá adaptace, angličtina přirozenou formou a radost z objevování.',
 }
 
 export default function RootLayout({children}) {

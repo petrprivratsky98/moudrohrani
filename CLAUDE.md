@@ -1,6 +1,6 @@
 # Moudrohraní
 
-Next.js 14 (App Router) web pro anglicko-českou školičku, deploy na Vercel.
+Next.js 14 (App Router) web pro dětskou skupinu Moudrohraní, deploy na Vercel.
 
 ## Stack
 - Next.js 14 App Router (JavaScript)

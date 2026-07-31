@@ -148,7 +148,7 @@ function ProcMoudrohrani() {
               fontSize: 'clamp(34px,4vw,58px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
             }}>
-              Nejsme jen školička.<br/>
+              Nejsme jen dětská skupina.<br/>
               <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>Jsme komunita.</span>
             </h2>
           </div>
