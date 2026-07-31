@@ -19,10 +19,10 @@ export function Nav() {
   }, [menuOpen])
 
   const links = [
-    {href: '#o-skolce', label: 'O školce'},
-    {href: '#program',  label: 'Program'},
-    {href: '#rozvrh',   label: 'Rozvrh'},
-    {href: '#tym',      label: 'Tým'},
+    {href: '#proc-moudrohrani', label: 'O nás'},
+    {href: '#program',          label: 'Program'},
+    {href: '#rozvrh',           label: 'Rozvrh'},
+    {href: '#tym',              label: 'Tým'},
     {href: 'https://moudrohrani.webooker.eu/flutter/', label: 'Rezervační systém', external: true},
   ]
 

@@ -6,20 +6,19 @@ import {Footer} from './components/Footer'
 import {Tym} from './components/Tym'
 import {C} from './components/Colors'
 
-// ❋ 001 — Hero
+// ❋ 001 — Hero (Emoce)
 function Hero() {
   const stats = [
-    {num: 'od 18 měsíců', label: 'do 4 let věku'},
-    {num: 'max. 10 dětí', label: 've skupině'},
-    {num: '2 rodilí',     label: 'mluvčí'},
-    {num: 'Po – Pá',      label: '8:00 – 16:00'},
+    {num: '1,5 – 3 roky', label: 'věk dětí'},
+    {num: 'max. 12 dětí', label: 've skupině'},
+    {num: '4 pečující', label: 'osoby'},
+    {num: 'Po – Pá', label: '8:00 – 16:00'},
   ]
   return (
     <section style={{
       minHeight: '100svh', position: 'relative', overflow: 'hidden',
       display: 'flex', alignItems: 'center',
     }}>
-      {/* Background photo */}
       <Image
         src="/uvod.jpeg"
         alt=""
@@ -27,20 +26,16 @@ function Hero() {
         style={{objectFit: 'cover', objectPosition: 'center 30%'}}
         priority
       />
-
-      {/* Gradient overlay — darker on left for text, lighter on right */}
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(100deg, rgba(30,20,5,0.82) 0%, rgba(30,20,5,0.55) 55%, rgba(30,20,5,0.25) 100%)',
+        background: 'linear-gradient(100deg, rgba(30,20,5,0.85) 0%, rgba(30,20,5,0.58) 55%, rgba(30,20,5,0.25) 100%)',
       }}/>
-
-      {/* Content */}
       <div style={{
         position: 'relative', zIndex: 1,
         maxWidth: 1200, margin: '0 auto', width: '100%',
         padding: 'clamp(100px,13vh,160px) clamp(24px,7vw,100px)',
       }}>
-        <div style={{maxWidth: 620}}>
+        <div style={{maxWidth: 640}}>
           <div style={{
             fontSize: 11, fontWeight: 700, letterSpacing: '0.22em',
             textTransform: 'uppercase', color: C.amber, marginBottom: 28,
@@ -50,16 +45,23 @@ function Hero() {
             fontSize: 'clamp(42px,5.8vw,80px)', fontWeight: 900,
             color: C.white, lineHeight: 1.0, letterSpacing: '-0.03em', marginBottom: 28,
           }}>
-            Anglicko-česká<br/>školička<br/>
-            <span style={{color: C.amber}}>v Hanspaulce.</span>
+            Bezpečné místo<br/>pro první kroky<br/>
+            <span style={{color: C.amber}}>mimo domov.</span>
           </h1>
 
           <p style={{
             fontSize: 'clamp(17px,1.6vw,21px)', color: 'rgba(255,255,255,0.82)',
-            lineHeight: 1.75, maxWidth: 460, marginBottom: 40,
+            lineHeight: 1.75, maxWidth: 480, marginBottom: 16,
           }}>
-            Místo, kde se děti od 18 měsíců do 4 let učí anglicky,
-            pohybují, tvoří a především radují.
+            Dětská skupina pro děti od 1,5 do 3 let s respektujícím přístupem,
+            citlivou adaptací a rodinnou atmosférou — pro dítě i pro vás.
+          </p>
+
+          <p style={{
+            fontSize: 'clamp(15px,1.3vw,18px)', color: 'rgba(255,255,255,0.58)',
+            lineHeight: 1.7, maxWidth: 460, marginBottom: 44,
+          }}>
+            První odloučení je velký krok. Jsme tu, aby byl krásný.
           </p>
 
           <div style={{display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 56}}>
@@ -72,7 +74,7 @@ function Hero() {
               boxShadow: `0 6px 24px ${C.orange}55`,
               textDecoration: 'none',
             }}>Mám zájem ↗</a>
-            <a href="#o-skolce" style={{
+            <a href="#proc-moudrohrani" style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '16px 32px', borderRadius: 100,
               border: '2px solid rgba(255,255,255,0.35)', color: C.white,
@@ -82,7 +84,6 @@ function Hero() {
             }}>Zjistit víc</a>
           </div>
 
-          {/* Stats row */}
           <div className="stats-grid" style={{
             borderTop: '1px solid rgba(255,255,255,0.2)',
             paddingTop: 28,
@@ -100,16 +101,37 @@ function Hero() {
   )
 }
 
-// ❋ 002 — O školce
-function OShkolce() {
-  const points = [
-    {title: 'Angličtina přirozeně', text: 'Dva rodilí mluvčí jsou součástí každého dne — angličtina prostupuje hrou, příběhy i písničkami.'},
-    {title: 'Malé skupiny', text: 'Maximálně 10 dětí ve skupině, vždy s plnou pozorností pedagoga.'},
-    {title: 'Ekologický přístup', text: 'Spolupracujeme s firmou Econea, preferujeme přírodní materiály a pomůcky. Vedeme děti k úctě k přírodě.'},
-    {title: 'Individuální přístup', text: 'Tým lektorů, kteří svou práci dělají s radostí a věnují dětem svou plnou pozornost.'},
+// ❋ 002 — Proč Moudrohraní
+function ProcMoudrohrani() {
+  const duvody = [
+    {
+      title: 'Respektující přístup',
+      text: 'Každé dítě má své vlastní tempo. Netlačíme, nevynucujeme — vytváříme bezpečné prostředí, kde dítě roste přirozeně a v klidu.',
+    },
+    {
+      title: 'Citlivá adaptace',
+      text: 'Věříme, že dobrý začátek je základ. Rodiče jsou v průběhu adaptace vítáni a zůstanou tak dlouho, jak jejich dítě potřebuje.',
+    },
+    {
+      title: 'Jeden tým s rodiči',
+      text: 'Tvoříme komunitu. Pravidelné konzultace a otevřená komunikace jsou pro nás samozřejmost, ne výjimka.',
+    },
+    {
+      title: 'Malá skupinka, velká péče',
+      text: 'Maximálně 12 dětí, 4 pečující osoby. Na každé 3 děti připadá jeden člověk — to je skutečně individuální přístup.',
+    },
+    {
+      title: 'Krásné prostředí Hanspaulky',
+      text: 'Jsme blízko lesů, zahrad a dětských hřišť. Ven chodíme každý den — za každého počasí. Příroda je součástí programu.',
+    },
+    {
+      title: 'Příroda a ekologie',
+      text: 'Preferujeme přírodní materiály a smysluplné hračky. Ekologické prostředky a pestrá strava jsou u nás standardem.',
+    },
   ]
+
   return (
-    <section id="o-skolce" style={{
+    <section id="proc-moudrohrani" style={{
       padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
       background: C.white,
     }}>
@@ -117,37 +139,204 @@ function OShkolce() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
-          gap: 'clamp(48px,6vw,96px)', alignItems: 'start',
+          gap: 'clamp(40px,5vw,72px)', alignItems: 'end',
+          marginBottom: 'clamp(56px,6vw,80px)',
         }}>
           <div>
-            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>O školce</div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Proč Moudrohraní</div>
+            <h2 style={{
+              fontSize: 'clamp(34px,4vw,58px)', fontWeight: 900,
+              color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
+            }}>
+              Nejsme jen školička.<br/>
+              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>Jsme komunita.</span>
+            </h2>
+          </div>
+          <p style={{
+            fontSize: 'clamp(17px,1.5vw,20px)', color: C.muted,
+            lineHeight: 1.8, margin: 0,
+          }}>
+            První odloučení od rodičů je velkým krokem — pro dítě i pro celou rodinu.
+            V Moudrohraní vytváříme prostředí, kde se děti cítí bezpečně, přirozeně
+            se rozvíjejí a s radostí objevují svět. A kde rodiče mají klid.
+          </p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(340px,100%),1fr))',
+          gap: 2,
+        }}>
+          {duvody.map(({title, text}, i) => (
+            <div key={title} style={{
+              background: i % 2 === 0 ? C.cream : C.sand,
+              padding: 'clamp(28px,3vw,44px)',
+            }}>
+              <div style={{
+                width: 34, height: 34, borderRadius: '50%',
+                background: C.orange, color: C.white,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 14, fontWeight: 800, marginBottom: 20, flexShrink: 0,
+              }}>{i + 1}</div>
+              <div style={{fontSize: 19, fontWeight: 800, color: C.ink, marginBottom: 12, letterSpacing: '-0.01em'}}>{title}</div>
+              <p style={{fontSize: 16, color: C.muted, lineHeight: 1.75, margin: 0}}>{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ❋ 003 — Naše hodnoty a přístup
+function Pristup() {
+  const hodnoty = [
+    {
+      cislo: '01',
+      nazev: 'Respekt',
+      popis: 'Nasloucháme dítěti. Nevnucujeme, netlačíme, nespěcháme. Každé dítě má právo na svůj čas a svůj způsob.',
+      detail: 'Pracujeme s emocemi — učíme děti pojmenovat pocity a řešit konflikty bez agrese. Bezpečný vztah je základ všeho.',
+    },
+    {
+      cislo: '02',
+      nazev: 'Adaptace',
+      popis: 'První dny v nové skupině jsou klíčové. Proto si na ně dáváme čas — bez spěchu a bez zbytečného tlaku.',
+      detail: 'Rodiče jsou v průběhu adaptace vítáni. Zůstanou tak dlouho, jak dítě potřebuje. Tento krok nepodceňujeme.',
+    },
+    {
+      cislo: '03',
+      nazev: 'Komunita',
+      popis: 'S rodiči tvoříme jeden tým. Zakládáme si na otevřené komunikaci, pravidelných konzultacích a vzájemné důvěře.',
+      detail: 'Rodiče jsou naši partneři, ne zákazníci. Sdílíme s nimi, co jejich dítě zažívá, co ho baví a co potřebuje.',
+    },
+  ]
+
+  return (
+    <section id="pristup" style={{
+      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
+      background: C.sand,
+    }}>
+      <div style={{maxWidth: 1200, margin: '0 auto'}}>
+        <div style={{marginBottom: 'clamp(48px,5vw,64px)'}}>
+          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Naše hodnoty a přístup</div>
+          <h2 style={{
+            fontSize: 'clamp(32px,4vw,56px)', fontWeight: 900,
+            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0, maxWidth: 520,
+          }}>
+            Na čem<br/>
+            <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>nám záleží.</span>
+          </h2>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(340px,100%),1fr))',
+          gap: 'clamp(20px,2.5vw,32px)',
+        }}>
+          {hodnoty.map(({cislo, nazev, popis, detail}) => (
+            <div key={cislo} style={{
+              background: C.white, borderRadius: 20,
+              padding: 'clamp(28px,3vw,44px)',
+            }}>
+              <div style={{
+                fontSize: 11, fontWeight: 700, letterSpacing: '0.2em',
+                color: C.orange, marginBottom: 20,
+              }}>{cislo}</div>
+              <div style={{
+                fontSize: 'clamp(26px,2.4vw,40px)', fontWeight: 900,
+                color: C.ink, letterSpacing: '-0.03em', marginBottom: 18, lineHeight: 1.1,
+              }}>{nazev}</div>
+              <p style={{
+                fontSize: 17, color: C.ink, lineHeight: 1.75,
+                marginBottom: 16, fontWeight: 500,
+              }}>{popis}</p>
+              <p style={{
+                fontSize: 15, color: C.muted, lineHeight: 1.75,
+                margin: 0, paddingTop: 16,
+                borderTop: `1px solid ${C.ink}10`,
+              }}>{detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ❋ 004 — Jak to u nás funguje
+function JakFungujeme() {
+  const fakta = [
+    {num: '12', label: 'dětí maximálně', sub: 'Malá skupinka umožňuje skutečně osobní přístup.'},
+    {num: '4', label: 'pečující osoby', sub: 'Na každé 3 děti připadá jeden člověk z týmu.'},
+    {num: 'každý\nden', label: 'pobyt venku', sub: 'Les, hřiště, zahrada — za každého počasí.'},
+    {num: '100%', label: 'přírodní materiály', sub: 'Hračky, pomůcky i čisticí prostředky volíme s rozvahou.'},
+  ]
+
+  return (
+    <section id="jak-fungujeme" style={{
+      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
+      background: C.white,
+    }}>
+      <div style={{maxWidth: 1200, margin: '0 auto'}}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
+          gap: 'clamp(48px,6vw,80px)', alignItems: 'start',
+        }}>
+          <div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Jak to u nás funguje</div>
             <h2 style={{
               fontSize: 'clamp(34px,4vw,58px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
             }}>
-              Jsme anglicko-česká školička<br/>pro děti od 18 měsíců do 4 let.
+              Malá skupinka.<br/>
+              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>Velká péče.</span>
             </h2>
             <p style={{
-              fontSize: 'clamp(17px,1.6vw,20px)', color: C.muted,
-              lineHeight: 1.75, margin: 0,
+              fontSize: 'clamp(17px,1.5vw,20px)', color: C.muted,
+              lineHeight: 1.8, marginBottom: 24,
             }}>
-              Nacházíme se v klidném prostředí pražské Hanspaulky, blízko lesů a dětských hřišť.
-              V případě zájmu vás rádi pozveme na ukázkový program zdarma, určený pro děti i rodiče.
+              V Moudrohraní pečují o skupinu maximálně 12 dětí čtyři pečující osoby.
+              Díky tomu máme dostatek času poznat každé dítě, respektovat jeho potřeby
+              a přizpůsobit péči jeho tempu.
             </p>
+            <p style={{
+              fontSize: 'clamp(16px,1.3vw,18px)', color: C.muted,
+              lineHeight: 1.8, marginBottom: 40,
+            }}>
+              Používáme smysluplné vzdělávací pomůcky a preferujeme přírodní materiály.
+              Vytváříme prostředí, které podporuje samostatnost, zvídavost i radost
+              z objevování. Strava je pestrá a vyvážená — vždy s úctou k tomu,
+              co dítě potřebuje.
+            </p>
+            <a href="#kontakt" style={{
+              display: 'inline-flex', alignItems: 'center',
+              padding: '15px 30px', borderRadius: 100,
+              background: C.orange, color: C.white,
+              fontSize: 14, fontWeight: 800,
+              textTransform: 'uppercase', letterSpacing: '0.1em',
+              textDecoration: 'none',
+              boxShadow: `0 4px 20px ${C.orange}33`,
+            }}>Přijďte se podívat →</a>
           </div>
 
-          <div style={{display: 'flex', flexDirection: 'column', gap: 0}}>
-            {points.map(({title, text}, i) => (
-              <div key={title} style={{
-                paddingTop: i === 0 ? 0 : 30,
-                paddingBottom: i < points.length - 1 ? 30 : 0,
-                borderBottom: i < points.length - 1 ? `1px solid ${C.ink}10` : 'none',
+          <div style={{
+            display: 'grid', gridTemplateColumns: '1fr 1fr',
+            gap: 'clamp(14px,1.8vw,22px)',
+          }}>
+            {fakta.map(({num, label, sub}) => (
+              <div key={label} style={{
+                background: C.sand, borderRadius: 16,
+                padding: 'clamp(20px,2vw,32px)',
               }}>
                 <div style={{
-                  fontSize: 18, fontWeight: 800, color: C.ink,
-                  marginBottom: 8, letterSpacing: '-0.01em',
-                }}>{title}</div>
-                <p style={{fontSize: 16, color: C.muted, lineHeight: 1.7, margin: 0}}>{text}</p>
+                  fontSize: 'clamp(32px,3vw,48px)', fontWeight: 900,
+                  color: C.orange, letterSpacing: '-0.03em',
+                  lineHeight: 1.1, marginBottom: 8,
+                  whiteSpace: 'pre-line',
+                }}>{num}</div>
+                <div style={{fontSize: 14, fontWeight: 800, color: C.ink, marginBottom: 8, lineHeight: 1.3}}>{label}</div>
+                <p style={{fontSize: 13, color: C.muted, lineHeight: 1.6, margin: 0}}>{sub}</p>
               </div>
             ))}
           </div>
@@ -157,16 +346,17 @@ function OShkolce() {
   )
 }
 
-// ❋ 003 — Program
+// ❋ 005 — Co děti během dne zažívají (program jako druhá vrstva)
 function Program() {
-  const items = [
-    {num: '01', title: 'Anglický program',    text: 'Angličtina prostupuje celým dnem přirozenou formou. Pracujeme se dvěma rodilými mluvčími z USA a Austrálie.'},
-    {num: '02', title: 'Jóga pro děti',       text: 'Pohybové a dechové aktivity přizpůsobené nejmenším. Rozvíjí koordinaci, pozornost a schopnost relaxace.'},
-    {num: '03', title: 'Výtvarné tvoření',    text: 'Malování, modelování, koláže a práce s přírodními materiály. Volnost k vyjádření a rozvoj jemné motoriky.'},
-    {num: '04', title: 'Hudba a rytmus',      text: 'Zpívání, rytmická cvičení a pohyb na hudbu v obou jazycích. Muzika je součástí každého dne.'},
-    {num: '05', title: 'Rozvoj řeči',         text: 'Logopedická podpora a hry zaměřené na komunikaci. Pracujeme s dětmi individuálně i ve skupině.'},
-    {num: '06', title: 'Emoční inteligence',  text: 'Učíme děti pojmenovat emoce, řešit konflikty a budovat zdravé a bezpečné vztahy s vrstevníky.'},
+  const aktivity = [
+    {emoji: '🧘', title: 'Pohyb a jóga', text: 'Dechová a pohybová cvičení přizpůsobená nejmenším. Koordinace, pozornost, schopnost relaxace.'},
+    {emoji: '🎨', title: 'Výtvarné tvoření', text: 'Malování, modelování, práce s přírodními materiály. Svoboda vyjádření a rozvoj jemné motoriky.'},
+    {emoji: '🎵', title: 'Hudba a rytmus', text: 'Zpívání, rytmická cvičení a pohyb na hudbu. Muzika je přirozenou součástí každého dne.'},
+    {emoji: '💬', title: 'Rozvoj řeči', text: 'Hry zaměřené na komunikaci a slovní zásobu. Pracujeme individuálně i ve skupině.'},
+    {emoji: '🌍', title: 'Angličtina přirozeně', text: 'Angličtina prostupuje dnem hravou formou — v písničkách, hrách a každodenní komunikaci.'},
+    {emoji: '❤️', title: 'Emoční inteligence', text: 'Pojmenování emocí, řešení konfliktů, budování bezpečných vztahů s vrstevníky.'},
   ]
+
   return (
     <section id="program" style={{
       padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
@@ -178,28 +368,32 @@ function Program() {
           flexWrap: 'wrap', gap: 24, marginBottom: 'clamp(48px,5vw,64px)',
         }}>
           <div>
-            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Programové aktivity</div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Co děti během dne zažívají</div>
             <h2 style={{fontSize: 'clamp(32px,4vw,56px)', fontWeight: 900, color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0}}>
-              Co děti čeká každý den.
+              Každý den<br/>
+              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>je plný zážitků.</span>
             </h2>
           </div>
-          <p style={{fontSize: 18, color: C.muted, lineHeight: 1.65, maxWidth: 380, margin: 0}}>
-            Certifikovaný program PlayWay pro výuku angličtiny doplňují pohybové, výtvarné a hudební aktivity.
+          <p style={{fontSize: 17, color: C.muted, lineHeight: 1.7, maxWidth: 380, margin: 0}}>
+            Program je pestrý a promyšlený — ale nikdy není cílem sám o sobě.
+            Vždy sledujeme, co dítě potřebuje právě teď.
           </p>
         </div>
 
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(340px,100%),1fr))', gap: 2}}>
-          {items.map(({num, title, text}) => (
-            <div key={num} style={{
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px,100%),1fr))',
+          gap: 2,
+        }}>
+          {aktivity.map(({emoji, title, text}) => (
+            <div key={title} style={{
               background: C.white,
-              padding: 'clamp(28px,3vw,44px)',
+              padding: 'clamp(24px,2.5vw,36px)',
+              display: 'flex', flexDirection: 'column', gap: 12,
             }}>
-              <div style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.15em',
-                color: C.orange, marginBottom: 14,
-              }}>{num}</div>
-              <div style={{fontSize: 19, fontWeight: 800, color: C.ink, marginBottom: 12, letterSpacing: '-0.01em'}}>{title}</div>
-              <p style={{fontSize: 16, color: C.muted, lineHeight: 1.7, margin: 0}}>{text}</p>
+              <div style={{fontSize: 26}}>{emoji}</div>
+              <div style={{fontSize: 18, fontWeight: 800, color: C.ink, letterSpacing: '-0.01em'}}>{title}</div>
+              <p style={{fontSize: 15, color: C.muted, lineHeight: 1.75, margin: 0}}>{text}</p>
             </div>
           ))}
         </div>
@@ -208,18 +402,18 @@ function Program() {
   )
 }
 
-// ❋ 004 — Rozvrh
+// ❋ 006 — Rozvrh (Praktické informace)
 function Rozvrh() {
   const activities = [
     {time: '8:00 – 8:30',   label: 'Příchod dětí, volný program'},
     {time: '8:30 – 9:00',   label: 'Přivítání v kroužku'},
-    {time: '9:00 – 9:45',   label: 'Program pro všestranný rozvoj, angličtina hravou formou'},
+    {time: '9:00 – 9:45',   label: 'Řízený program — pohyb, tvoření, hudba, rozvoj řeči'},
     {time: '9:45 – 10:15',  label: 'Svačina'},
-    {time: '10:15 – 12:00', label: 'Venku — pohybové aktivity, jemná motorika, výtvarné činnosti'},
-    {time: '12:00 – 12:30', label: 'Obědová pauza'},
+    {time: '10:15 – 12:00', label: 'Venku — hřiště, les, zahrada, pohybové aktivity'},
+    {time: '12:00 – 12:30', label: 'Oběd'},
     {time: '12:30 – 13:00', label: 'Odchod dětí z dopoledního programu'},
     {time: '13:00 – 15:00', label: 'Odpočinek, klidné aktivity'},
-    {time: '15:00 – 15:30', label: 'Svačina'},
+    {time: '15:00 – 15:30', label: 'Odpolední svačina'},
     {time: '15:30 – 16:00', label: 'Odchod domů'},
   ]
   return (
@@ -234,7 +428,7 @@ function Rozvrh() {
           gap: 'clamp(48px,6vw,80px)', alignItems: 'start',
         }}>
           <div>
-            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginBottom: 20}}>Rozvrh</div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginBottom: 20}}>Praktické informace</div>
             <h2 style={{
               fontSize: 'clamp(32px,4vw,56px)', fontWeight: 900,
               color: C.white, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
@@ -243,16 +437,17 @@ function Rozvrh() {
             </h2>
             <p style={{
               fontSize: 'clamp(17px,1.6vw,20px)', color: 'rgba(255,255,255,0.8)',
-              lineHeight: 1.75, marginBottom: 24, maxWidth: 400,
+              lineHeight: 1.8, marginBottom: 20, maxWidth: 400,
             }}>
-              Program probíhá od pondělí do pátku od 8:00 do 13:00.
-              V případě zájmu je možnost docházky do 16:00.
+              Provoz od pondělí do pátku, 8:00 – 13:00.
+              Odpolední program do 16:00 je možný po dohodě.
             </p>
             <p style={{
               fontSize: 16, color: 'rgba(255,255,255,0.6)',
-              lineHeight: 1.65, margin: '0 0 40px',
+              lineHeight: 1.7, margin: '0 0 40px',
             }}>
-              Časový harmonogram je orientační — přizpůsobujeme ho potřebám dětí a situaci.
+              Harmonogram je orientační — přizpůsobujeme ho náladě
+              a potřebám dětí. Dny si nejsou nikdy úplně stejné.
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
@@ -279,7 +474,7 @@ function Rozvrh() {
                   fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.65)',
                   minWidth: 104, paddingTop: 2, flexShrink: 0, letterSpacing: '0.02em',
                 }}>{time}</div>
-                <div style={{fontSize: 16, color: C.white, lineHeight: 1.45}}>{label}</div>
+                <div style={{fontSize: 16, color: C.white, lineHeight: 1.5}}>{label}</div>
               </div>
             ))}
           </div>
@@ -289,7 +484,7 @@ function Rozvrh() {
   )
 }
 
-// ❋ 005 — Kontakt
+// ❋ 007 — Kontakt
 function Kontakt() {
   const [form, setForm]   = useState({name: '', email: '', age: '', msg: ''})
   const [status, setStatus] = useState('idle')
@@ -313,6 +508,7 @@ function Kontakt() {
     width: '100%', padding: '14px 18px', borderRadius: 10,
     border: `1.5px solid ${C.ink}15`, background: C.cream,
     fontSize: 16, color: C.ink, outline: 'none', fontFamily: 'inherit',
+    boxSizing: 'border-box',
   }
 
   const labelStyle = {
@@ -335,22 +531,30 @@ function Kontakt() {
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Kontakt</div>
           <h2 style={{
             fontSize: 'clamp(32px,4vw,56px)', fontWeight: 900,
-            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24,
+            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 20,
           }}>
-            Zajímá vás místo<br/>pro vaše dítě?
+            Zajímá vás místo<br/>
+            <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>pro vaše dítě?</span>
           </h2>
           <p style={{
             fontSize: 'clamp(16px,1.5vw,19px)', color: C.muted,
-            lineHeight: 1.75, marginBottom: 48, maxWidth: 420,
+            lineHeight: 1.8, marginBottom: 16, maxWidth: 420,
           }}>
-            Napište nám nebo zavolejte. Rádi vám školu ukážeme
-            a zodpovíme všechny vaše otázky.
+            Rádi vás pozveme na <strong style={{color: C.ink}}>ukázkový program zdarma</strong> —
+            přijďte se podívat, poznat prostředí a popovídat si s naším týmem.
+          </p>
+          <p style={{
+            fontSize: 'clamp(15px,1.3vw,17px)', color: C.muted,
+            lineHeight: 1.8, marginBottom: 48, maxWidth: 420,
+          }}>
+            Napište nám nebo zavolejte. Zodpovíme všechny otázky
+            a sdělíme aktuální obsazenost i možnosti docházky.
           </p>
 
           <div style={{display: 'flex', flexDirection: 'column', gap: 28}}>
             {[
-              {label: 'Email',   val: 'ema@moudrohrani.cz',                      href: 'mailto:ema@moudrohrani.cz'},
-              {label: 'Telefon', val: '777 009 121',                              href: 'tel:+420777009121'},
+              {label: 'Email',   val: 'info@moudrohrani.cz',                       href: 'mailto:info@moudrohrani.cz'},
+              {label: 'Telefon', val: '777 009 121',                                href: 'tel:+420777009121'},
               {label: 'Adresa',  val: 'Na Pískách 1175/71, Praha 6 — Hanspaulka'},
               {label: 'IČO',     val: '10799427'},
             ].map(({label, val, href}) => (
@@ -360,7 +564,7 @@ function Kontakt() {
                   letterSpacing: '0.15em', color: C.muted, marginBottom: 5,
                 }}>{label}</div>
                 {href
-                  ? <a href={href} style={{fontSize: 17, color: C.ink, fontWeight: 600}}>{val}</a>
+                  ? <a href={href} style={{fontSize: 17, color: C.ink, fontWeight: 600, textDecoration: 'none'}}>{val}</a>
                   : <div style={{fontSize: 17, color: C.ink, fontWeight: 600}}>{val}</div>
                 }
               </div>
@@ -374,8 +578,9 @@ function Kontakt() {
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 16,
           }}>
+            <div style={{fontSize: 40}}>✓</div>
             <h3 style={{fontSize: 28, fontWeight: 800, color: C.ink, letterSpacing: '-0.02em', margin: 0}}>Zpráva odeslána.</h3>
-            <p style={{fontSize: 18, color: C.muted, lineHeight: 1.65, maxWidth: 300, margin: 0}}>Ozveme se vám co nejdříve.</p>
+            <p style={{fontSize: 18, color: C.muted, lineHeight: 1.65, maxWidth: 300, margin: 0}}>Ozveme se vám co nejdříve, obvykle do pár dnů.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: 18}}>
@@ -399,13 +604,13 @@ function Kontakt() {
             <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
               <label style={labelStyle}>Zpráva</label>
               <textarea required rows={5} value={form.msg}
-                placeholder="Zájem o místo, otázky, prohlídka..."
+                placeholder="Zájem o místo, otázky, ukázkový program..."
                 onChange={e => setForm(f => ({...f, msg: e.target.value}))}
                 style={{...inputStyle, resize: 'vertical'}}/>
             </div>
             {status === 'err' && (
-              <p style={{fontSize: 14, color: C.coral, margin: 0}}>
-                Odeslání se nezdařilo. Zkuste to znovu nebo napište přímo na email.
+              <p style={{fontSize: 14, color: '#c0392b', margin: 0}}>
+                Odeslání se nezdařilo. Zkuste to znovu nebo napište přímo na info@moudrohrani.cz
               </p>
             )}
             <button type="submit" disabled={status === 'sending'} style={{
@@ -431,7 +636,9 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <OShkolce />
+        <ProcMoudrohrani />
+        <Pristup />
+        <JakFungujeme />
         <Program />
         <Rozvrh />
         <Tym />
