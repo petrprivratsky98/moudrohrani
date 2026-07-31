@@ -439,8 +439,7 @@ function Rozvrh() {
               fontSize: 'clamp(17px,1.6vw,20px)', color: 'rgba(255,255,255,0.8)',
               lineHeight: 1.8, marginBottom: 20, maxWidth: 400,
             }}>
-              Provoz od pondělí do pátku, 8:00 – 13:00.
-              Odpolední program do 16:00 je možný po dohodě.
+              Provoz od pondělí do pátku 8:00 – 16:00.
             </p>
             <p style={{
               fontSize: 16, color: 'rgba(255,255,255,0.6)',
