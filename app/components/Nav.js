@@ -31,7 +31,7 @@ export function Nav() {
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 500,
         padding: '0 clamp(20px, 5vw, 64px)',
-        height: 68,
+        height: 84,
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         background: C.white,
         boxShadow: scrolled ? '0 2px 16px rgba(40,30,10,0.08)' : '0 1px 0 rgba(40,30,10,0.06)',
@@ -43,9 +43,9 @@ export function Nav() {
           <Image
             src="/logo-text.png"
             alt="Moudrohraní"
-            height={36}
-            width={198}
-            style={{height: 'clamp(26px, 2.6vw, 36px)', width: 'auto'}}
+            height={44}
+            width={242}
+            style={{height: 'clamp(30px, 3.2vw, 44px)', width: 'auto'}}
             priority
           />
         </a>
@@ -56,15 +56,15 @@ export function Nav() {
             <a key={l.href} href={l.href}
               {...(l.external ? {target: '_blank', rel: 'noopener noreferrer'} : {})}
               style={{
-                fontSize: 13, fontWeight: 700, letterSpacing: '0.08em',
+                fontSize: 15, fontWeight: 700, letterSpacing: '0.08em',
                 textTransform: 'uppercase', textDecoration: 'none',
                 color: l.external ? C.orange : C.ink,
                 whiteSpace: 'nowrap',
               }}>{l.label}</a>
           ))}
           <a href="#kontakt" style={{
-            fontSize: 13, fontWeight: 800, letterSpacing: '0.06em',
-            textTransform: 'uppercase', padding: '10px 22px', borderRadius: 100,
+            fontSize: 15, fontWeight: 800, letterSpacing: '0.06em',
+            textTransform: 'uppercase', padding: '12px 26px', borderRadius: 100,
             background: C.orange, color: C.white, textDecoration: 'none',
             whiteSpace: 'nowrap',
           }}>Mám zájem ↗</a>

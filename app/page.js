@@ -50,15 +50,15 @@ function Hero() {
           </h1>
 
           <p style={{
-            fontSize: 'clamp(17px,1.6vw,27px)', color: 'rgba(255,255,255,0.82)',
+            fontSize: 'clamp(17px,1.6vw,23px)', color: 'rgba(255,255,255,0.82)',
             lineHeight: 1.75, maxWidth: 480, marginBottom: 16,
           }}>
-            Dětská skupina pro děti od 1,5 do 3 let s <strong>respektujícím přístupem</strong>,{' '}
-            <strong>citlivou adaptací</strong> a rodinnou atmosférou — pro dítě i pro vás.
+            Dětská skupina pro děti od 1,5 do 3 let s respektujícím přístupem,
+            citlivou adaptací a rodinnou atmosférou — pro dítě i pro vás.
           </p>
 
           <p style={{
-            fontSize: 'clamp(15px,1.3vw,23px)', color: 'rgba(255,255,255,0.58)',
+            fontSize: 'clamp(15px,1.3vw,20px)', color: 'rgba(255,255,255,0.58)',
             lineHeight: 1.7, maxWidth: 460, marginBottom: 44,
           }}>
             První odloučení je velký krok. Jsme tu, aby byl krásný.
@@ -90,8 +90,8 @@ function Hero() {
           }}>
             {stats.map(({num, label}) => (
               <div key={label}>
-                <div style={{fontSize: 'clamp(17px,1.6vw,27px)', fontWeight: 800, color: C.white, letterSpacing: '-0.01em'}}>{num}</div>
-                <div style={{fontSize: 'clamp(13px,1vw,16px)', fontWeight: 500, color: 'rgba(255,255,255,0.6)', marginTop: 4}}>{label}</div>
+                <div style={{fontSize: 'clamp(17px,1.6vw,23px)', fontWeight: 800, color: C.white, letterSpacing: '-0.01em'}}>{num}</div>
+                <div style={{fontSize: 'clamp(13px,1vw,14px)', fontWeight: 500, color: 'rgba(255,255,255,0.6)', marginTop: 4}}>{label}</div>
               </div>
             ))}
           </div>
@@ -106,27 +106,27 @@ function ProcMoudrohrani() {
   const duvody = [
     {
       title: 'Respektující přístup',
-      text: <>Každé dítě má své <strong style={{color: C.ink}}>vlastní tempo</strong>. Netlačíme, nevynucujeme — vytváříme bezpečné prostředí, kde dítě roste přirozeně a v klidu.</>,
+      text: 'Každé dítě má své vlastní tempo. Netlačíme, nevynucujeme — vytváříme bezpečné prostředí, kde dítě roste přirozeně a v klidu.',
     },
     {
       title: 'Citlivá adaptace',
-      text: <>Každé dítě má své vlastní tempo. Netlačíme, ale vytváříme <strong style={{color: C.ink}}>bezpečné prostředí</strong>, ve kterém může dítě růst přirozeně a s důvěrou.</>,
+      text: 'Každé dítě má své vlastní tempo. Netlačíme, ale vytváříme bezpečné prostředí, ve kterém může dítě růst přirozeně a s důvěrou.',
     },
     {
       title: 'Malá skupinka, velká péče',
-      text: <>Na maximálně <strong style={{color: C.ink}}>12 dětí</strong> připadají <strong style={{color: C.ink}}>čtyři zkušené a empatické</strong> pečující osoby, které se dokáží dětem skutečně věnovat a vnímat jejich potřeby.</>,
+      text: 'Na maximálně 12 dětí připadají čtyři zkušené a empatické pečující osoby, které se dokáží dětem skutečně věnovat a vnímat jejich potřeby.',
     },
     {
       title: 'Smysluplný program',
-      text: <>Každý den dětem nabízíme podněty a aktivity, které je baví a přirozeně rozvíjejí. Prostor dostává <strong style={{color: C.ink}}>hra, tvoření, pohyb, objevování</strong> i společné chvíle.</>,
+      text: 'Každý den dětem nabízíme podněty a aktivity, které je baví a přirozeně rozvíjejí. Prostor dostává hra, tvoření, pohyb, objevování i společné chvíle.',
     },
     {
       title: 'Krásné prostředí Hanspaulky',
-      text: <>Jsme blízko <strong style={{color: C.ink}}>lesa, zahrad a dětských hřišť</strong>. Každý den chodíme ven a přírodu přirozeně zapojujeme do našeho programu.</>,
+      text: 'Jsme blízko lesa, zahrad a dětských hřišť. Každý den chodíme ven a přírodu přirozeně zapojujeme do našeho programu.',
     },
     {
       title: 'Zdraví a přírodní materiály',
-      text: <>Preferujeme smysluplné hračky z <strong style={{color: C.ink}}>přírodních materiálů</strong>. Děti se u nás stravují zdravě, k úklidu používáme jen ekologické prostředky a domýšlíme důsledky našeho konání.</>,
+      text: 'Preferujeme smysluplné hračky z přírodních materiálů. Děti se u nás stravují zdravě, k úklidu používáme jen ekologické prostředky a domýšlíme důsledky našeho konání.',
     },
   ]
 
@@ -145,7 +145,7 @@ function ProcMoudrohrani() {
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Proč Moudrohraní</div>
             <h2 style={{
-              fontSize: 'clamp(34px,4vw,76px)', fontWeight: 900,
+              fontSize: 'clamp(34px,4vw,64px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
             }}>
               S rodiči fungujeme<br/>
@@ -153,14 +153,14 @@ function ProcMoudrohrani() {
             </h2>
           </div>
           <p style={{
-            fontSize: 'clamp(17px,1.5vw,26px)', color: C.muted,
+            fontSize: 'clamp(17px,1.5vw,22px)', color: C.muted,
             lineHeight: 1.8, margin: 0,
           }}>
             První odloučení je velkým krokem pro dítě i rodiče. V Moudrohraní dáváme
-            dětem <strong style={{color: C.ink}}>bezpečí, čas a prostor</strong>, aby si na nové
-            prostředí postupně zvykly. Adaptaci tvoříme <strong style={{color: C.ink}}>společně
-            s rodiči</strong> a zůstáváme s nimi v pravidelném kontaktu. Nasloucháme, sdílíme
-            a společně hledáme, co jejich dítě právě potřebuje.
+            dětem bezpečí, čas a prostor, aby si na nové prostředí postupně zvykly.
+            Adaptaci tvoříme společně s rodiči a zůstáváme s nimi v pravidelném
+            kontaktu. Nasloucháme, sdílíme a společně hledáme, co jejich dítě
+            právě potřebuje.
           </p>
         </div>
 
@@ -180,8 +180,8 @@ function ProcMoudrohrani() {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: 14, fontWeight: 800, marginBottom: 20, flexShrink: 0,
               }}>{i + 1}</div>
-              <div style={{fontSize: 'clamp(19px,1.6vw,24px)', fontWeight: 800, color: C.ink, marginBottom: 12, letterSpacing: '-0.01em'}}>{title}</div>
-              <p style={{fontSize: 'clamp(16px,1.2vw,19px)', color: C.muted, lineHeight: 1.75, margin: 0}}>{text}</p>
+              <div style={{fontSize: 'clamp(19px,1.6vw,21px)', fontWeight: 800, color: C.ink, marginBottom: 12, letterSpacing: '-0.01em'}}>{title}</div>
+              <p style={{fontSize: 'clamp(16px,1.2vw,17px)', color: C.muted, lineHeight: 1.75, margin: 0}}>{text}</p>
             </div>
           ))}
         </div>
@@ -196,19 +196,19 @@ function Pristup() {
     {
       cislo: '01',
       nazev: 'Respekt',
-      popis: <>Nasloucháme dítěti. Nevnucujeme, netlačíme, nespěcháme. Každé dítě má právo na <strong>svůj čas a svůj způsob</strong>.</>,
+      popis: 'Nasloucháme dítěti. Nevnucujeme, netlačíme, nespěcháme. Každé dítě má právo na svůj čas a svůj způsob.',
       detail: 'Pracujeme s emocemi — učíme děti pojmenovat pocity a řešit konflikty bez agrese. Bezpečný vztah je základ všeho.',
     },
     {
       cislo: '02',
       nazev: 'Adaptace',
-      popis: <>Pro většinu rodin je dětská skupina první zkušeností s hlídáním dětí mimo domov. Vnímáme velikost takového kroku pro všechny zúčastněné a <strong>maximálně vás podpoříme</strong>.</>,
+      popis: 'Pro většinu rodin je dětská skupina první zkušeností s hlídáním dětí mimo domov. Vnímáme velikost takového kroku pro všechny zúčastněné a maximálně vás podpoříme.',
       detail: 'Přítomnost rodičů vítáme, aby mohla adaptace probíhat přirozeně. Tento krok nepodceňujeme.',
     },
     {
       cislo: '03',
       nazev: 'Komunita',
-      popis: <>Za <strong>bezmála 10 let fungování</strong> máme ověřeno, že také rodiče tvoří dětskou skupinu. Vždy vás vyslechneme, vítáme vaše nápady a sami přicházíme s vlastními.</>,
+      popis: 'Za bezmála 10 let fungování máme ověřeno, že také rodiče tvoří dětskou skupinu. Vždy vás vyslechneme, vítáme vaše nápady a sami přicházíme s vlastními.',
       detail: 'Jednáme otevřeně, proaktivně a sdílíme s vámi, co vaše dítě během dne zažívá, co ho baví a co potřebuje.',
     },
   ]
@@ -222,7 +222,7 @@ function Pristup() {
         <div style={{marginBottom: 'clamp(48px,5vw,64px)'}}>
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Naše hodnoty a přístup</div>
           <h2 style={{
-            fontSize: 'clamp(32px,4vw,73px)', fontWeight: 900,
+            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
             color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0, maxWidth: 520,
           }}>
             Na čem<br/>
@@ -245,15 +245,15 @@ function Pristup() {
                 color: C.orange, marginBottom: 20,
               }}>{cislo}</div>
               <div style={{
-                fontSize: 'clamp(26px,2.4vw,52px)', fontWeight: 900,
+                fontSize: 'clamp(26px,2.4vw,44px)', fontWeight: 900,
                 color: C.ink, letterSpacing: '-0.03em', marginBottom: 18, lineHeight: 1.1,
               }}>{nazev}</div>
               <p style={{
-                fontSize: 'clamp(17px,1.3vw,20px)', color: C.ink, lineHeight: 1.75,
+                fontSize: 'clamp(17px,1.3vw,19px)', color: C.ink, lineHeight: 1.75,
                 marginBottom: 16, fontWeight: 500,
               }}>{popis}</p>
               <p style={{
-                fontSize: 'clamp(15px,1.1vw,17px)', color: C.muted, lineHeight: 1.75,
+                fontSize: 'clamp(15px,1.1vw,16px)', color: C.muted, lineHeight: 1.75,
                 margin: 0, paddingTop: 16,
                 borderTop: `1px solid ${C.ink}10`,
               }}>{detail}</p>
@@ -288,29 +288,28 @@ function JakFungujeme() {
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Jak to u nás funguje</div>
             <h2 style={{
-              fontSize: 'clamp(34px,4vw,76px)', fontWeight: 900,
+              fontSize: 'clamp(34px,4vw,64px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
             }}>
               Malá skupinka dává čas<br/>
               <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>poznat každé dítě.</span>
             </h2>
             <p style={{
-              fontSize: 'clamp(17px,1.5vw,26px)', color: C.muted,
+              fontSize: 'clamp(17px,1.5vw,22px)', color: C.muted,
               lineHeight: 1.8, marginBottom: 24,
             }}>
-              V Moudrohraní pečují o skupinu maximálně <strong style={{color: C.ink}}>12 dětí čtyři
-              zkušené pečující osoby</strong>. Díky tomu máme dostatek času poznat každé
-              dítě a přizpůsobit péči jeho tempu.
+              V Moudrohraní pečují o skupinu maximálně 12 dětí čtyři zkušené pečující
+              osoby. Díky tomu máme dostatek času poznat každé dítě a přizpůsobit
+              péči jeho tempu.
             </p>
             <p style={{
-              fontSize: 'clamp(16px,1.3vw,23px)', color: C.muted,
+              fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
               lineHeight: 1.8, marginBottom: 40,
             }}>
-              Používáme kvalitní vzdělávací pomůcky, preferujeme <strong style={{color: C.ink}}>přírodní
-              materiály</strong> a vytváříme prostředí, které podporuje samostatnost, zvídavost
-              i radost z objevování. Děti vedeme k ohleduplnosti vůči přírodě i okolnímu
-              světu. Strava je <strong style={{color: C.ink}}>pestrá a vyvážená</strong>: vždy s úctou
-              k tomu, co dítě potřebuje.
+              Používáme kvalitní vzdělávací pomůcky, preferujeme přírodní materiály
+              a vytváříme prostředí, které podporuje samostatnost, zvídavost i radost
+              z objevování. Děti vedeme k ohleduplnosti vůči přírodě i okolnímu světu.
+              Strava je pestrá a vyvážená: vždy s úctou k tomu, co dítě potřebuje.
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
@@ -333,13 +332,13 @@ function JakFungujeme() {
                 padding: 'clamp(20px,2vw,32px)',
               }}>
                 <div style={{
-                  fontSize: 'clamp(32px,3vw,62px)', fontWeight: 900,
+                  fontSize: 'clamp(32px,3vw,53px)', fontWeight: 900,
                   color: C.orange, letterSpacing: '-0.03em',
                   lineHeight: 1.1, marginBottom: 8,
                   whiteSpace: 'pre-line',
                 }}>{num}</div>
-                <div style={{fontSize: 'clamp(14px,1vw,17px)', fontWeight: 800, color: C.ink, marginBottom: 8, lineHeight: 1.3}}>{label}</div>
-                <p style={{fontSize: 'clamp(13px,0.9vw,16px)', color: C.muted, lineHeight: 1.6, margin: 0}}>{sub}</p>
+                <div style={{fontSize: 'clamp(14px,1vw,15px)', fontWeight: 800, color: C.ink, marginBottom: 8, lineHeight: 1.3}}>{label}</div>
+                <p style={{fontSize: 'clamp(13px,0.9vw,14px)', color: C.muted, lineHeight: 1.6, margin: 0}}>{sub}</p>
               </div>
             ))}
           </div>
@@ -352,12 +351,12 @@ function JakFungujeme() {
 // ❋ 005 — Co děti během dne zažívají (program jako druhá vrstva)
 function Program() {
   const aktivity = [
-    {emoji: '🧘', title: 'Pohyb a jóga', text: <>Dechová a pohybová cvičení přizpůsobená nejmenším. Podporujeme <strong style={{color: C.ink}}>koordinaci, vnímání vlastního těla</strong>, pozornost i schopnost zklidnit se.</>},
-    {emoji: '🎨', title: 'Výtvarné tvoření', text: <>Malujeme, stříháme, lepíme, modelujeme a zkoušíme různé materiály a techniky. Děti mají <strong style={{color: C.ink}}>volnou ruku</strong> a prostor tvořit podle své fantazie. A někdy se u toho i pořádně zašpiníme.</>},
-    {emoji: '🎵', title: 'Hudba a rytmus', text: <>Zpívání, rytmické hry a pohyb na hudbu. Hudba <strong style={{color: C.ink}}>přirozeně provází</strong> náš každodenní život.</>},
-    {emoji: '💬', title: 'Rozvoj řeči', text: <>Povídáme si, vyprávíme a společně sdílíme, co nás během dne potká. Děti se přirozeně učí <strong style={{color: C.ink}}>naslouchat, vyjadřovat se</strong> a komunikovat s ostatními.</>},
-    {emoji: '🌍', title: 'Angličtina přirozeně', text: <>Angličtinu zařazujeme do našeho programu <strong style={{color: C.ink}}>hravou a přirozenou formou</strong>. Děti se s ní seznamují prostřednictvím písniček, říkanek, her a dalších aktivit.</>},
-    {emoji: '❤️', title: 'Vztahy a emoce', text: <>Učíme děti <strong style={{color: C.ink}}>rozpoznávat a pojmenovávat emoce</strong>, vyjadřovat své potřeby a postupně zvládat běžné situace a konflikty. Podporujeme bezpečné a respektující vztahy mezi dětmi.</>},
+    {emoji: '🧘', title: 'Pohyb a jóga', text: 'Dechová a pohybová cvičení přizpůsobená nejmenším. Podporujeme koordinaci, vnímání vlastního těla, pozornost i schopnost zklidnit se.'},
+    {emoji: '🎨', title: 'Výtvarné tvoření', text: 'Malujeme, stříháme, lepíme, modelujeme a zkoušíme různé materiály a techniky. Děti mají volnou ruku a prostor tvořit podle své fantazie. A někdy se u toho i pořádně zašpiníme.'},
+    {emoji: '🎵', title: 'Hudba a rytmus', text: 'Zpívání, rytmické hry a pohyb na hudbu. Hudba přirozeně provází náš každodenní život.'},
+    {emoji: '💬', title: 'Rozvoj řeči', text: 'Povídáme si, vyprávíme a společně sdílíme, co nás během dne potká. Děti se přirozeně učí naslouchat, vyjadřovat se a komunikovat s ostatními.'},
+    {emoji: '🌍', title: 'Angličtina přirozeně', text: 'Angličtinu zařazujeme do našeho programu hravou a přirozenou formou. Děti se s ní seznamují prostřednictvím písniček, říkanek, her a dalších aktivit.'},
+    {emoji: '❤️', title: 'Vztahy a emoce', text: 'Učíme děti rozpoznávat a pojmenovávat emoce, vyjadřovat své potřeby a postupně zvládat běžné situace a konflikty. Podporujeme bezpečné a respektující vztahy mezi dětmi.'},
   ]
 
   return (
@@ -372,15 +371,15 @@ function Program() {
         }}>
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Co děti během dne zažívají</div>
-            <h2 style={{fontSize: 'clamp(32px,4vw,73px)', fontWeight: 900, color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0}}>
+            <h2 style={{fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900, color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0}}>
               Hrajeme si, objevujeme,<br/>
               <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>rosteme.</span>
             </h2>
           </div>
-          <p style={{fontSize: 'clamp(17px,1.3vw,20px)', color: C.muted, lineHeight: 1.7, maxWidth: 380, margin: 0}}>
-            Dětem nabízíme pestrý program, který podporuje jejich <strong style={{color: C.ink}}>přirozený
-            rozvoj</strong>. Střídáme tvoření, pohyb, hudbu, povídání, procházky, volnou
-            hru i společné chvíle u jídla.
+          <p style={{fontSize: 'clamp(17px,1.3vw,19px)', color: C.muted, lineHeight: 1.7, maxWidth: 380, margin: 0}}>
+            Dětem nabízíme pestrý program, který podporuje jejich přirozený rozvoj.
+            Střídáme tvoření, pohyb, hudbu, povídání, procházky, volnou hru
+            i společné chvíle u jídla.
           </p>
         </div>
 
@@ -396,8 +395,8 @@ function Program() {
               display: 'flex', flexDirection: 'column', gap: 12,
             }}>
               <div style={{fontSize: 26}}>{emoji}</div>
-              <div style={{fontSize: 'clamp(18px,1.3vw,21px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em'}}>{title}</div>
-              <p style={{fontSize: 'clamp(15px,1.1vw,17px)', color: C.muted, lineHeight: 1.75, margin: 0}}>{text}</p>
+              <div style={{fontSize: 'clamp(18px,1.3vw,19px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em'}}>{title}</div>
+              <p style={{fontSize: 'clamp(15px,1.1vw,16px)', color: C.muted, lineHeight: 1.75, margin: 0}}>{text}</p>
             </div>
           ))}
         </div>
@@ -434,24 +433,24 @@ function Rozvrh() {
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginBottom: 20}}>Praktické informace</div>
             <h2 style={{
-              fontSize: 'clamp(32px,4vw,73px)', fontWeight: 900,
+              fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
               color: C.white, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
             }}>
               Jak probíhá<br/>každý den?
             </h2>
             <p style={{
-              fontSize: 'clamp(17px,1.6vw,26px)', color: 'rgba(255,255,255,0.8)',
+              fontSize: 'clamp(17px,1.6vw,22px)', color: 'rgba(255,255,255,0.8)',
               lineHeight: 1.8, marginBottom: 20, maxWidth: 400,
             }}>
-              Provoz od pondělí do pátku <strong>8:00 – 16:00</strong>.
+              Provoz od pondělí do pátku 8:00 – 16:00.
             </p>
             <p style={{
-              fontSize: 'clamp(16px,1.2vw,19px)', color: 'rgba(255,255,255,0.6)',
+              fontSize: 'clamp(16px,1.2vw,17px)', color: 'rgba(255,255,255,0.6)',
               lineHeight: 1.7, margin: '0 0 40px',
             }}>
-              Harmonogram je orientační – dny mají <strong style={{color: 'rgba(255,255,255,0.85)'}}>zaběhnutý
-              rytmus</strong>, na který jsou děti zvyklé a který přizpůsobujeme aktuální
-              náladě a potřebám dětí.
+              Harmonogram je orientační – dny mají zaběhnutý rytmus, na který
+              jsou děti zvyklé a který přizpůsobujeme aktuální náladě
+              a potřebám dětí.
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
@@ -475,10 +474,10 @@ function Rozvrh() {
                 marginBottom: i < activities.length - 1 ? 18 : 0,
               }}>
                 <div style={{
-                  fontSize: 'clamp(13px,0.9vw,15px)', fontWeight: 700, color: 'rgba(255,255,255,0.65)',
+                  fontSize: 'clamp(13px,0.9vw,14px)', fontWeight: 700, color: 'rgba(255,255,255,0.65)',
                   minWidth: 104, paddingTop: 2, flexShrink: 0, letterSpacing: '0.02em',
                 }}>{time}</div>
-                <div style={{fontSize: 'clamp(16px,1.1vw,19px)', color: C.white, lineHeight: 1.5}}>{label}</div>
+                <div style={{fontSize: 'clamp(16px,1.1vw,17px)', color: C.white, lineHeight: 1.5}}>{label}</div>
               </div>
             ))}
           </div>
@@ -504,28 +503,28 @@ function PrijdteSePodivat() {
         <div>
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Ukázkový program zdarma</div>
           <h2 style={{
-            fontSize: 'clamp(32px,4vw,73px)', fontWeight: 900,
+            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
             color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24,
           }}>
             Přijďte se podívat.
           </h2>
           <p style={{
-            fontSize: 'clamp(17px,1.5vw,26px)', color: C.ink,
+            fontSize: 'clamp(17px,1.5vw,22px)', color: C.ink,
             lineHeight: 1.8, fontWeight: 600, marginBottom: 16,
           }}>
-            Nejlepší způsob, jak poznat <strong>Moudrohraní</strong>, je zažít jeho atmosféru.
+            Nejlepší způsob, jak poznat Moudrohraní, je zažít jeho atmosféru.
           </p>
           <p style={{
-            fontSize: 'clamp(16px,1.3vw,23px)', color: C.muted,
+            fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
             lineHeight: 1.8, marginBottom: 16,
           }}>
-            Rádi vás pozveme na <strong style={{color: C.ink}}>ukázkový program zdarma</strong>, kterého
-            se účastní děti společně s rodiči. Budete mít možnost poznat naše prostředí,
-            seznámit se s pečujícími osobami a zjistit, zda je Moudrohraní tím pravým
-            místem právě pro vás a vaše dítě.
+            Rádi vás pozveme na ukázkový program zdarma, kterého se účastní děti
+            společně s rodiči. Budete mít možnost poznat naše prostředí, seznámit se
+            s pečujícími osobami a zjistit, zda je Moudrohraní tím pravým místem
+            právě pro vás a vaše dítě.
           </p>
           <p style={{
-            fontSize: 'clamp(16px,1.3vw,23px)', color: C.muted,
+            fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
             lineHeight: 1.8, marginBottom: 32,
           }}>
             Kontaktujte nás a rádi vám sdělíme aktuální obsazenost i možnosti docházky.
@@ -545,8 +544,8 @@ function PrijdteSePodivat() {
             lineHeight: 1.8, margin: 0,
             paddingTop: 24, borderTop: `1px solid ${C.ink}10`,
           }}>
-            Jste rodiče z <strong style={{color: C.ink}}>Dejvic, Bubenče, Břevnova nebo Suchdola</strong> a
-            hledáte dětskou skupinu pro děti od 1,5 roku? Moudrohraní je respektující
+            Jste rodiče z Dejvic, Bubenče, Břevnova nebo Suchdola a hledáte dětskou
+            skupinu pro děti od 1,5 roku? Moudrohraní je respektující
             dětská skupina na Praze 6 v krásném prostředí Hanspaulky. Vyznáváme
             respektující přístup a dlouhou adaptaci, s rodiči tvoříme jeden tým.
             Dbáme na přirozenost, pestrost, angličtinu, zdraví a ohleduplnost k přírodě.
@@ -616,24 +615,24 @@ function Kontakt() {
         <div>
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Kontakt</div>
           <h2 style={{
-            fontSize: 'clamp(32px,4vw,73px)', fontWeight: 900,
+            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
             color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 20,
           }}>
             Zajímá vás místo<br/>
             <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>pro vaše dítě?</span>
           </h2>
           <p style={{
-            fontSize: 'clamp(16px,1.5vw,25px)', color: C.muted,
+            fontSize: 'clamp(16px,1.5vw,21px)', color: C.muted,
             lineHeight: 1.8, marginBottom: 16, maxWidth: 420,
           }}>
             Rádi vás pozveme na <strong style={{color: C.ink}}>ukázkový program zdarma</strong> —
             přijďte se podívat, poznat prostředí a popovídat si s naším týmem.
           </p>
           <p style={{
-            fontSize: 'clamp(15px,1.3vw,22px)', color: C.muted,
+            fontSize: 'clamp(15px,1.3vw,19px)', color: C.muted,
             lineHeight: 1.8, marginBottom: 48, maxWidth: 420,
           }}>
-            Napište nám nebo zavolejte. <strong style={{color: C.ink}}>Zodpovíme všechny otázky</strong>{' '}
+            Napište nám nebo zavolejte. Zodpovíme všechny otázky
             a sdělíme aktuální obsazenost i možnosti docházky.
           </p>
 
@@ -650,8 +649,8 @@ function Kontakt() {
                   letterSpacing: '0.15em', color: C.muted, marginBottom: 5,
                 }}>{label}</div>
                 {href
-                  ? <a href={href} style={{fontSize: 'clamp(17px,1.1vw,20px)', color: C.ink, fontWeight: 600, textDecoration: 'none'}}>{val}</a>
-                  : <div style={{fontSize: 'clamp(17px,1.1vw,20px)', color: C.ink, fontWeight: 600}}>{val}</div>
+                  ? <a href={href} style={{fontSize: 'clamp(17px,1.1vw,18px)', color: C.ink, fontWeight: 600, textDecoration: 'none'}}>{val}</a>
+                  : <div style={{fontSize: 'clamp(17px,1.1vw,18px)', color: C.ink, fontWeight: 600}}>{val}</div>
                 }
               </div>
             ))}
@@ -665,8 +664,8 @@ function Kontakt() {
             alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 16,
           }}>
             <div style={{fontSize: 40}}>✓</div>
-            <h3 style={{fontSize: 'clamp(28px,2vw,34px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.02em', margin: 0}}>Zpráva odeslána.</h3>
-            <p style={{fontSize: 'clamp(18px,1.3vw,21px)', color: C.muted, lineHeight: 1.65, maxWidth: 300, margin: 0}}>Ozveme se vám co nejdříve, obvykle do pár dnů.</p>
+            <h3 style={{fontSize: 'clamp(28px,2vw,30px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.02em', margin: 0}}>Zpráva odeslána.</h3>
+            <p style={{fontSize: 'clamp(18px,1.3vw,19px)', color: C.muted, lineHeight: 1.65, maxWidth: 300, margin: 0}}>Ozveme se vám co nejdříve, obvykle do pár dnů.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: 18}}>

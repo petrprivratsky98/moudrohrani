@@ -63,7 +63,7 @@ export function Tym() {
         <div style={{marginBottom: 'clamp(48px,5vw,64px)'}}>
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Náš tým</div>
           <h2 style={{
-            fontSize: 'clamp(32px,4vw,73px)', fontWeight: 900,
+            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
             color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
           }}>
             Lidé, kteří se starají<br/>o vaše děti.
@@ -85,8 +85,8 @@ export function Tym() {
             }}>
               <Avatar name={name} photo={photo} color={color} />
               <div>
-                <div style={{fontSize: 'clamp(16px,1.1vw,19px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em', marginBottom: 4}}>{name}</div>
-                <div style={{fontSize: 'clamp(13px,0.9vw,16px)', color: C.muted, fontWeight: 500}}>{role}</div>
+                <div style={{fontSize: 'clamp(16px,1.1vw,17px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em', marginBottom: 4}}>{name}</div>
+                <div style={{fontSize: 'clamp(13px,0.9vw,14px)', color: C.muted, fontWeight: 500}}>{role}</div>
               </div>
             </div>
           ))}
