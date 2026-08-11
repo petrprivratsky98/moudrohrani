@@ -23,7 +23,7 @@ export function Nav() {
     {href: '#program',          label: 'Program'},
     {href: '#rozvrh',           label: 'Rozvrh'},
     {href: '#tym',              label: 'Tým'},
-    {href: 'https://moudrohrani.webooker.eu/flutter/', label: 'Rezervační systém', external: true},
+    {href: 'https://moudrohrani.webooker.eu/flutter/', label: 'Docházka', external: true},
   ]
 
   return (

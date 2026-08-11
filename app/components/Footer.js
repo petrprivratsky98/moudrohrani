@@ -9,16 +9,16 @@ const socials = [
 export function Footer() {
   return (
     <footer style={{background: C.ink, padding: 'clamp(48px,6vw,80px) clamp(24px,5vw,80px)'}}>
-      <div style={{maxWidth: 1200, margin: '0 auto'}}>
+      <div style={{maxWidth: 1320, margin: '0 auto'}}>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(240px,100%),1fr))', gap: 'clamp(32px,4vw,64px)', marginBottom: 48}}>
           <div>
-            <div style={{fontSize: 'clamp(20px,1.8vw,26px)', fontWeight: 900, color: C.orange, marginBottom: 6, letterSpacing: '-0.02em'}}>
+            <div style={{fontSize: 'clamp(20px,1.8vw,34px)', fontWeight: 900, color: C.orange, marginBottom: 6, letterSpacing: '-0.02em'}}>
               Moudrohraní
             </div>
             <div style={{fontSize: 11, fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: `${C.white}44`, marginBottom: 16}}>
               Dětská skupina · Praha 6
             </div>
-            <p style={{fontSize: 14, color: `${C.white}66`, lineHeight: 1.7, margin: 0, maxWidth: 280}}>
+            <p style={{fontSize: 'clamp(14px,1vw,17px)', color: `${C.white}66`, lineHeight: 1.7, margin: 0, maxWidth: 280}}>
               Respektující dětská skupina pro děti od 1,5 do 3 let v srdci pražské Hanspaulky.
             </p>
           </div>
@@ -26,7 +26,7 @@ export function Footer() {
             <div style={{fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: `${C.white}33`, marginBottom: 16}}>Navigace</div>
             {['O nás', 'Program', 'Rozvrh', 'Kontakt'].map((l, i) => (
               <a key={i} href={`#${['proc-moudrohrani','program','rozvrh','kontakt'][i]}`} style={{
-                display: 'block', fontSize: 14, color: `${C.white}77`, textDecoration: 'none',
+                display: 'block', fontSize: 'clamp(14px,1vw,17px)', color: `${C.white}77`, textDecoration: 'none',
                 marginBottom: 10, fontWeight: 500,
               }}>{l}</a>
             ))}
@@ -35,15 +35,15 @@ export function Footer() {
             <div style={{fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: `${C.white}33`, marginBottom: 16}}>Kontakt</div>
             <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
               {[
-                {label: 'Email',   val: 'ema@moudrohrani.cz',       href: 'mailto:ema@moudrohrani.cz'},
-                {label: 'Telefon', val: '777 009 121',               href: 'tel:+420777009121'},
+                {label: 'Email',   val: 'info@moudrohrani.cz',      href: 'mailto:info@moudrohrani.cz'},
+                {label: 'Telefon', val: '+420 777 009 121',          href: 'tel:+420777009121'},
                 {label: 'Adresa',  val: 'Na Pískách 1175/71, Praha 6'},
               ].map(({label, val, href}) => (
                 <div key={label}>
                   <div style={{fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: `${C.white}33`, marginBottom: 2}}>{label}</div>
                   {href
-                    ? <a href={href} style={{fontSize: 14, color: `${C.white}77`, textDecoration: 'none'}}>{val}</a>
-                    : <div style={{fontSize: 14, color: `${C.white}77`}}>{val}</div>
+                    ? <a href={href} style={{fontSize: 'clamp(14px,1vw,17px)', color: `${C.white}77`, textDecoration: 'none'}}>{val}</a>
+                    : <div style={{fontSize: 'clamp(14px,1vw,17px)', color: `${C.white}77`}}>{val}</div>
                   }
                 </div>
               ))}
