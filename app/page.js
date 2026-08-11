@@ -45,8 +45,8 @@ function Hero() {
             fontSize: 'clamp(42px,5.8vw,80px)', fontWeight: 900,
             color: C.white, lineHeight: 1.0, letterSpacing: '-0.03em', marginBottom: 28,
           }}>
-            Bezpečné místo<br/>pro první kroky<br/>
-            <span style={{color: C.amber}}>mimo domov.</span>
+            První krůčky<br/>mimo domov.<br/>
+            <span style={{color: C.amber}}>Společně.</span>
           </h1>
 
           <p style={{
@@ -110,23 +110,23 @@ function ProcMoudrohrani() {
     },
     {
       title: 'Citlivá adaptace',
-      text: 'Věříme, že dobrý začátek je základ. Rodiče jsou v průběhu adaptace vítáni a zůstanou tak dlouho, jak jejich dítě potřebuje.',
-    },
-    {
-      title: 'Jeden tým s rodiči',
-      text: 'Tvoříme komunitu. Pravidelné konzultace a otevřená komunikace jsou pro nás samozřejmost, ne výjimka.',
+      text: 'Každé dítě má své vlastní tempo. Netlačíme, ale vytváříme bezpečné prostředí, ve kterém může dítě růst přirozeně a s důvěrou.',
     },
     {
       title: 'Malá skupinka, velká péče',
-      text: 'Maximálně 12 dětí, 4 pečující osoby. Na každé 3 děti připadá jeden člověk — to je skutečně individuální přístup.',
+      text: 'Na maximálně 12 dětí připadají čtyři zkušené a empatické pečující osoby, které se dokáží dětem skutečně věnovat a vnímat jejich potřeby.',
+    },
+    {
+      title: 'Smysluplný program',
+      text: 'Každý den dětem nabízíme podněty a aktivity, které je baví a přirozeně rozvíjejí. Prostor dostává hra, tvoření, pohyb, objevování i společné chvíle.',
     },
     {
       title: 'Krásné prostředí Hanspaulky',
-      text: 'Jsme blízko lesů, zahrad a dětských hřišť. Ven chodíme každý den — za každého počasí. Příroda je součástí programu.',
+      text: 'Jsme blízko lesa, zahrad a dětských hřišť. Každý den chodíme ven a přírodu přirozeně zapojujeme do našeho programu.',
     },
     {
-      title: 'Příroda a ekologie',
-      text: 'Preferujeme přírodní materiály a smysluplné hračky. Ekologické prostředky a pestrá strava jsou u nás standardem.',
+      title: 'Zdraví a přírodní materiály',
+      text: 'Preferujeme smysluplné hračky z přírodních materiálů. Děti se u nás stravují zdravě, k úklidu používáme jen ekologické prostředky a domýšlíme důsledky našeho konání.',
     },
   ]
 
@@ -148,17 +148,19 @@ function ProcMoudrohrani() {
               fontSize: 'clamp(34px,4vw,58px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
             }}>
-              Nejsme jen dětská skupina.<br/>
-              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>Jsme komunita.</span>
+              S rodiči fungujeme<br/>
+              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>jako jeden tým.</span>
             </h2>
           </div>
           <p style={{
             fontSize: 'clamp(17px,1.5vw,20px)', color: C.muted,
             lineHeight: 1.8, margin: 0,
           }}>
-            První odloučení od rodičů je velkým krokem — pro dítě i pro celou rodinu.
-            V Moudrohraní vytváříme prostředí, kde se děti cítí bezpečně, přirozeně
-            se rozvíjejí a s radostí objevují svět. A kde rodiče mají klid.
+            První odloučení je velkým krokem pro dítě i rodiče. V Moudrohraní dáváme
+            dětem bezpečí, čas a prostor, aby si na nové prostředí postupně zvykly.
+            Adaptaci tvoříme společně s rodiči a zůstáváme s nimi v pravidelném
+            kontaktu. Nasloucháme, sdílíme a společně hledáme, co jejich dítě
+            právě potřebuje.
           </p>
         </div>
 
@@ -200,14 +202,14 @@ function Pristup() {
     {
       cislo: '02',
       nazev: 'Adaptace',
-      popis: 'První dny v nové skupině jsou klíčové. Proto si na ně dáváme čas — bez spěchu a bez zbytečného tlaku.',
-      detail: 'Rodiče jsou v průběhu adaptace vítáni. Zůstanou tak dlouho, jak dítě potřebuje. Tento krok nepodceňujeme.',
+      popis: 'Pro většinu rodin je dětská skupina první zkušeností s hlídáním dětí mimo domov. Vnímáme velikost takového kroku pro všechny zúčastněné a maximálně vás podpoříme.',
+      detail: 'Přítomnost rodičů vítáme, aby mohla adaptace probíhat přirozeně. Tento krok nepodceňujeme.',
     },
     {
       cislo: '03',
       nazev: 'Komunita',
-      popis: 'S rodiči tvoříme jeden tým. Zakládáme si na otevřené komunikaci, pravidelných konzultacích a vzájemné důvěře.',
-      detail: 'Rodiče jsou naši partneři, ne zákazníci. Sdílíme s nimi, co jejich dítě zažívá, co ho baví a co potřebuje.',
+      popis: 'Za bezmála 10 let fungování máme ověřeno, že také rodiče tvoří dětskou skupinu. Vždy vás vyslechneme, vítáme vaše nápady a sami přicházíme s vlastními.',
+      detail: 'Jednáme otevřeně, proaktivně a sdílíme s vámi, co vaše dítě během dne zažívá, co ho baví a co potřebuje.',
     },
   ]
 
@@ -289,25 +291,25 @@ function JakFungujeme() {
               fontSize: 'clamp(34px,4vw,58px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
             }}>
-              Malá skupinka.<br/>
-              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>Velká péče.</span>
+              Malá skupinka dává čas<br/>
+              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>poznat každé dítě.</span>
             </h2>
             <p style={{
               fontSize: 'clamp(17px,1.5vw,20px)', color: C.muted,
               lineHeight: 1.8, marginBottom: 24,
             }}>
-              V Moudrohraní pečují o skupinu maximálně 12 dětí čtyři pečující osoby.
-              Díky tomu máme dostatek času poznat každé dítě, respektovat jeho potřeby
-              a přizpůsobit péči jeho tempu.
+              V Moudrohraní pečují o skupinu maximálně 12 dětí čtyři zkušené pečující
+              osoby. Díky tomu máme dostatek času poznat každé dítě a přizpůsobit
+              péči jeho tempu.
             </p>
             <p style={{
               fontSize: 'clamp(16px,1.3vw,18px)', color: C.muted,
               lineHeight: 1.8, marginBottom: 40,
             }}>
-              Používáme smysluplné vzdělávací pomůcky a preferujeme přírodní materiály.
-              Vytváříme prostředí, které podporuje samostatnost, zvídavost i radost
-              z objevování. Strava je pestrá a vyvážená — vždy s úctou k tomu,
-              co dítě potřebuje.
+              Používáme kvalitní vzdělávací pomůcky, preferujeme přírodní materiály
+              a vytváříme prostředí, které podporuje samostatnost, zvídavost i radost
+              z objevování. Děti vedeme k ohleduplnosti vůči přírodě i okolnímu světu.
+              Strava je pestrá a vyvážená: vždy s úctou k tomu, co dítě potřebuje.
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
@@ -349,12 +351,12 @@ function JakFungujeme() {
 // ❋ 005 — Co děti během dne zažívají (program jako druhá vrstva)
 function Program() {
   const aktivity = [
-    {emoji: '🧘', title: 'Pohyb a jóga', text: 'Dechová a pohybová cvičení přizpůsobená nejmenším. Koordinace, pozornost, schopnost relaxace.'},
-    {emoji: '🎨', title: 'Výtvarné tvoření', text: 'Malování, modelování, práce s přírodními materiály. Svoboda vyjádření a rozvoj jemné motoriky.'},
-    {emoji: '🎵', title: 'Hudba a rytmus', text: 'Zpívání, rytmická cvičení a pohyb na hudbu. Muzika je přirozenou součástí každého dne.'},
-    {emoji: '💬', title: 'Rozvoj řeči', text: 'Hry zaměřené na komunikaci a slovní zásobu. Pracujeme individuálně i ve skupině.'},
-    {emoji: '🌍', title: 'Angličtina přirozeně', text: 'Angličtina prostupuje dnem hravou formou — v písničkách, hrách a každodenní komunikaci.'},
-    {emoji: '❤️', title: 'Emoční inteligence', text: 'Pojmenování emocí, řešení konfliktů, budování bezpečných vztahů s vrstevníky.'},
+    {emoji: '🧘', title: 'Pohyb a jóga', text: 'Dechová a pohybová cvičení přizpůsobená nejmenším. Podporujeme koordinaci, vnímání vlastního těla, pozornost i schopnost zklidnit se.'},
+    {emoji: '🎨', title: 'Výtvarné tvoření', text: 'Malujeme, stříháme, lepíme, modelujeme a zkoušíme různé materiály a techniky. Děti mají volnou ruku a prostor tvořit podle své fantazie. A někdy se u toho i pořádně zašpiníme.'},
+    {emoji: '🎵', title: 'Hudba a rytmus', text: 'Zpívání, rytmické hry a pohyb na hudbu. Hudba přirozeně provází náš každodenní život.'},
+    {emoji: '💬', title: 'Rozvoj řeči', text: 'Povídáme si, vyprávíme a společně sdílíme, co nás během dne potká. Děti se přirozeně učí naslouchat, vyjadřovat se a komunikovat s ostatními.'},
+    {emoji: '🌍', title: 'Angličtina přirozeně', text: 'Angličtinu zařazujeme do našeho programu hravou a přirozenou formou. Děti se s ní seznamují prostřednictvím písniček, říkanek, her a dalších aktivit.'},
+    {emoji: '❤️', title: 'Vztahy a emoce', text: 'Učíme děti rozpoznávat a pojmenovávat emoce, vyjadřovat své potřeby a postupně zvládat běžné situace a konflikty. Podporujeme bezpečné a respektující vztahy mezi dětmi.'},
   ]
 
   return (
@@ -370,13 +372,14 @@ function Program() {
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Co děti během dne zažívají</div>
             <h2 style={{fontSize: 'clamp(32px,4vw,56px)', fontWeight: 900, color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0}}>
-              Každý den<br/>
-              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>je plný zážitků.</span>
+              Hrajeme si, objevujeme,<br/>
+              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>rosteme.</span>
             </h2>
           </div>
           <p style={{fontSize: 17, color: C.muted, lineHeight: 1.7, maxWidth: 380, margin: 0}}>
-            Program je pestrý a promyšlený — ale nikdy není cílem sám o sobě.
-            Vždy sledujeme, co dítě potřebuje právě teď.
+            Dětem nabízíme pestrý program, který podporuje jejich přirozený rozvoj.
+            Střídáme tvoření, pohyb, hudbu, povídání, procházky, volnou hru
+            i společné chvíle u jídla.
           </p>
         </div>
 
@@ -445,8 +448,9 @@ function Rozvrh() {
               fontSize: 16, color: 'rgba(255,255,255,0.6)',
               lineHeight: 1.7, margin: '0 0 40px',
             }}>
-              Harmonogram je orientační — přizpůsobujeme ho náladě
-              a potřebám dětí. Dny si nejsou nikdy úplně stejné.
+              Harmonogram je orientační – dny mají zaběhnutý rytmus, na který
+              jsou děti zvyklé a který přizpůsobujeme aktuální náladě
+              a potřebám dětí.
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
@@ -483,7 +487,57 @@ function Rozvrh() {
   )
 }
 
-// ❋ 007 — Kontakt
+// ❋ 007 — Přijďte se podívat
+function PrijdteSePodivat() {
+  return (
+    <section style={{
+      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
+      background: C.sand,
+    }}>
+      <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
+        <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Ukázkový program zdarma</div>
+        <h2 style={{
+          fontSize: 'clamp(32px,4vw,56px)', fontWeight: 900,
+          color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24,
+        }}>
+          Přijďte se podívat.
+        </h2>
+        <p style={{
+          fontSize: 'clamp(17px,1.5vw,20px)', color: C.ink,
+          lineHeight: 1.8, fontWeight: 600, marginBottom: 16,
+        }}>
+          Nejlepší způsob, jak poznat Moudrohraní, je zažít jeho atmosféru.
+        </p>
+        <p style={{
+          fontSize: 'clamp(16px,1.3vw,18px)', color: C.muted,
+          lineHeight: 1.8, marginBottom: 16,
+        }}>
+          Rádi vás pozveme na ukázkový program zdarma, kterého se účastní děti
+          společně s rodiči. Budete mít možnost poznat naše prostředí, seznámit se
+          s pečujícími osobami a zjistit, zda je Moudrohraní tím pravým místem
+          právě pro vás a vaše dítě.
+        </p>
+        <p style={{
+          fontSize: 'clamp(16px,1.3vw,18px)', color: C.muted,
+          lineHeight: 1.8, marginBottom: 40,
+        }}>
+          Kontaktujte nás a rádi vám sdělíme aktuální obsazenost i možnosti docházky.
+        </p>
+        <a href="#kontakt" style={{
+          display: 'inline-flex', alignItems: 'center',
+          padding: '16px 32px', borderRadius: 100,
+          background: C.orange, color: C.white,
+          fontSize: 14, fontWeight: 800,
+          textTransform: 'uppercase', letterSpacing: '0.1em',
+          textDecoration: 'none',
+          boxShadow: `0 4px 20px ${C.orange}33`,
+        }}>Mám zájem ↓</a>
+      </div>
+    </section>
+  )
+}
+
+// ❋ 008 — Kontakt
 function Kontakt() {
   const [form, setForm]   = useState({name: '', email: '', age: '', msg: ''})
   const [status, setStatus] = useState('idle')
@@ -553,7 +607,7 @@ function Kontakt() {
           <div style={{display: 'flex', flexDirection: 'column', gap: 28}}>
             {[
               {label: 'Email',   val: 'info@moudrohrani.cz',                       href: 'mailto:info@moudrohrani.cz'},
-              {label: 'Telefon', val: '777 009 121',                                href: 'tel:+420777009121'},
+              {label: 'Telefon', val: '+420 777 009 121',                           href: 'tel:+420777009121'},
               {label: 'Adresa',  val: 'Na Pískách 1175/71, Praha 6 — Hanspaulka'},
               {label: 'IČO',     val: '10799427'},
             ].map(({label, val, href}) => (
@@ -629,6 +683,56 @@ function Kontakt() {
   )
 }
 
+// ❋ 009 — Lokalita (Praha 6)
+function Lokalita() {
+  return (
+    <section style={{
+      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
+      background: C.cream,
+    }}>
+      <div style={{
+        maxWidth: 1200, margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px,100%),1fr))',
+        gap: 'clamp(40px,5vw,64px)', alignItems: 'center',
+      }}>
+        <div>
+          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Praha 6 — Hanspaulka</div>
+          <h2 style={{
+            fontSize: 'clamp(28px,3.2vw,44px)', fontWeight: 900,
+            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 20,
+          }}>
+            Dětská skupina blízko vám.
+          </h2>
+          <p style={{
+            fontSize: 'clamp(16px,1.3vw,18px)', color: C.muted,
+            lineHeight: 1.8, margin: 0,
+          }}>
+            Jste rodiče z Dejvic, Bubenče, Břevnova nebo Suchdola a hledáte dětskou
+            skupinu pro děti od 1,5 roku? Moudrohraní je respektující dětská skupina
+            na Praze 6 v krásném prostředí Hanspaulky. Vyznáváme respektující přístup
+            a dlouhou adaptaci, s rodiči tvoříme jeden tým. Dbáme na přirozenost,
+            pestrost, angličtinu, zdraví a ohleduplnost k přírodě.
+          </p>
+        </div>
+        <div style={{
+          borderRadius: 20, overflow: 'hidden', aspectRatio: '4 / 3',
+          boxShadow: `0 8px 32px ${C.ink}15`,
+        }}>
+          <iframe
+            title="Moudrohraní na mapě"
+            src="https://www.google.com/maps?q=Na+P%C3%ADsk%C3%A1ch+1175%2F71,+Praha+6&output=embed"
+            width="100%" height="100%"
+            style={{border: 0, display: 'block'}}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -641,7 +745,9 @@ export default function Home() {
         <Program />
         <Rozvrh />
         <Tym />
+        <PrijdteSePodivat />
         <Kontakt />
+        <Lokalita />
       </main>
       <Footer />
     </>
