@@ -19,12 +19,12 @@ export function Nav() {
   }, [menuOpen])
 
   const links = [
-    {href: '#proc-moudrohrani', label: 'O nás'},
-    {href: '#program',          label: 'Program'},
-    {href: '#rozvrh',           label: 'Rozvrh'},
-    {href: '#tym',              label: 'Tým'},
-    {href: 'https://moudrohrani.webooker.eu/flutter/', label: 'Docházka', external: true},
+    {href: '#program', label: 'Program'},
+    {href: '#tym',     label: 'Tým'},
+    {href: '#kontakt', label: 'Kontakt'},
   ]
+
+  const dochazka = {href: 'https://moudrohrani.webooker.eu/flutter/', label: 'Docházka', external: true}
 
   return (
     <>
@@ -68,6 +68,11 @@ export function Nav() {
             background: C.orange, color: C.white, textDecoration: 'none',
             whiteSpace: 'nowrap',
           }}>Mám zájem ↗</a>
+          <a href={dochazka.href} target="_blank" rel="noopener noreferrer" style={{
+            fontSize: 15, fontWeight: 700, letterSpacing: '0.08em',
+            textTransform: 'uppercase', textDecoration: 'none',
+            color: C.orange, whiteSpace: 'nowrap',
+          }}>{dochazka.label}</a>
         </div>
 
         {/* Hamburger — display controlled only by CSS class */}
@@ -109,6 +114,12 @@ export function Nav() {
           color: C.white, fontSize: 16, fontWeight: 800,
           textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.08em',
         }}>Mám zájem ↗</a>
+        <a href={dochazka.href} target="_blank" rel="noopener noreferrer"
+          onClick={() => setMenuOpen(false)} style={{
+            display: 'inline-flex', alignItems: 'center', marginTop: 20,
+            fontSize: 18, fontWeight: 700, color: C.amber,
+            textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.08em',
+          }}>{dochazka.label}</a>
       </div>
 
       {/* Scroll to top */}

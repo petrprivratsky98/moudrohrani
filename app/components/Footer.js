@@ -3,7 +3,6 @@ import {C} from './Colors'
 
 const socials = [
   {href: 'https://www.facebook.com/moudrohrani', src: '/fb.png', alt: 'Facebook'},
-  {href: 'https://www.instagram.com/moudrohrani', src: '/ig.png', alt: 'Instagram'},
 ]
 
 export function Footer() {

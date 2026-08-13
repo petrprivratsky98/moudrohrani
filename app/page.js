@@ -51,17 +51,10 @@ function Hero() {
 
           <p style={{
             fontSize: 'clamp(17px,1.6vw,23px)', color: 'rgba(255,255,255,0.82)',
-            lineHeight: 1.75, maxWidth: 480, marginBottom: 16,
+            lineHeight: 1.75, maxWidth: 480, marginBottom: 44,
           }}>
             Dětská skupina pro děti od 1,5 do 3 let s respektujícím přístupem,
-            citlivou adaptací a rodinnou atmosférou — pro dítě i pro vás.
-          </p>
-
-          <p style={{
-            fontSize: 'clamp(15px,1.3vw,20px)', color: 'rgba(255,255,255,0.58)',
-            lineHeight: 1.7, maxWidth: 460, marginBottom: 44,
-          }}>
-            První odloučení je velký krok. Jsme tu, aby byl krásný.
+            citlivou adaptací, smysluplným programem a rodinnou atmosférou.
           </p>
 
           <div style={{display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 56}}>
@@ -101,37 +94,10 @@ function Hero() {
   )
 }
 
-// ❋ 002 — Proč Moudrohraní
-function ProcMoudrohrani() {
-  const duvody = [
-    {
-      title: 'Respektující přístup',
-      text: 'Každé dítě má své vlastní tempo. Netlačíme, nevynucujeme — vytváříme bezpečné prostředí, kde dítě roste přirozeně a v klidu.',
-    },
-    {
-      title: 'Citlivá adaptace',
-      text: 'Každé dítě má své vlastní tempo. Netlačíme, ale vytváříme bezpečné prostředí, ve kterém může dítě růst přirozeně a s důvěrou.',
-    },
-    {
-      title: 'Malá skupinka, velká péče',
-      text: 'Na maximálně 12 dětí připadají čtyři zkušené a empatické pečující osoby, které se dokáží dětem skutečně věnovat a vnímat jejich potřeby.',
-    },
-    {
-      title: 'Smysluplný program',
-      text: 'Každý den dětem nabízíme podněty a aktivity, které je baví a přirozeně rozvíjejí. Prostor dostává hra, tvoření, pohyb, objevování i společné chvíle.',
-    },
-    {
-      title: 'Krásné prostředí Hanspaulky',
-      text: 'Jsme blízko lesa, zahrad a dětských hřišť. Každý den chodíme ven a přírodu přirozeně zapojujeme do našeho programu.',
-    },
-    {
-      title: 'Zdraví a přírodní materiály',
-      text: 'Preferujeme smysluplné hračky z přírodních materiálů. Děti se u nás stravují zdravě, k úklidu používáme jen ekologické prostředky a domýšlíme důsledky našeho konání.',
-    },
-  ]
-
+// ❋ 002 — Citlivá adaptace
+function CitlivaAdaptace() {
   return (
-    <section id="proc-moudrohrani" style={{
+    <section id="citliva-adaptace" style={{
       padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
       background: C.white,
     }}>
@@ -140,10 +106,9 @@ function ProcMoudrohrani() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
           gap: 'clamp(40px,5vw,72px)', alignItems: 'end',
-          marginBottom: 'clamp(56px,6vw,80px)',
         }}>
           <div>
-            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Proč Moudrohraní</div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Citlivá adaptace</div>
             <h2 style={{
               fontSize: 'clamp(34px,4vw,64px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
@@ -163,6 +128,56 @@ function ProcMoudrohrani() {
             právě potřebuje.
           </p>
         </div>
+      </div>
+    </section>
+  )
+}
+
+// ❋ 003 — Proč Moudrohraní
+function ProcMoudrohrani() {
+  const duvody = [
+    {
+      title: 'Respektující přístup',
+      text: 'Respektujeme osobnost, tempo i potřeby každého dítěte a podporujeme ho v jeho přirozeném rozvoji.',
+    },
+    {
+      title: 'Citlivá adaptace',
+      text: 'Na adaptaci klademe velký důraz. Každému dítěti dáváme čas a podporu, kterou potřebuje, a rodiče jsou při adaptaci vítáni.',
+    },
+    {
+      title: 'Malá skupinka, velká péče',
+      text: 'Dostatek pečujících osob nám umožňuje vnímat potřeby každého dítěte a věnovat mu individuální pozornost, kdykoli ji potřebuje.',
+    },
+    {
+      title: 'Smysluplný program',
+      text: 'Dětem nabízíme podněty a aktivity, které je baví a přirozeně rozvíjejí. Střídáme společné aktivity s volnou hrou, tvořením, pohybem a objevováním.',
+    },
+    {
+      title: 'Příroda na dosah',
+      text: 'Pražská Hanspaulka nám umožňuje být blízko přírodě. Pro venkovní aktivity rádi využíváme nedaleký les a dětská hřiště.',
+    },
+    {
+      title: 'Zdravé prostředí',
+      text: 'Dbáme na zdravé stravování, přírodní materiály a ekologický přístup. Chceme, aby děti trávily čas v příjemném a zdravém prostředí.',
+    },
+  ]
+
+  return (
+    <section id="proc-moudrohrani" style={{
+      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
+      background: C.sand,
+    }}>
+      <div style={{maxWidth: 1320, margin: '0 auto'}}>
+        <div style={{marginBottom: 'clamp(56px,6vw,80px)'}}>
+          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Proč Moudrohraní</div>
+          <h2 style={{
+            fontSize: 'clamp(34px,4vw,64px)', fontWeight: 900,
+            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
+          }}>
+            Na čem<br/>
+            <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>nám záleží.</span>
+          </h2>
+        </div>
 
         <div style={{
           display: 'grid',
@@ -171,7 +186,7 @@ function ProcMoudrohrani() {
         }}>
           {duvody.map(({title, text}, i) => (
             <div key={title} style={{
-              background: i % 2 === 0 ? C.cream : C.sand,
+              background: i % 2 === 0 ? C.white : C.cream,
               padding: 'clamp(28px,3vw,44px)',
             }}>
               <div style={{
@@ -190,173 +205,15 @@ function ProcMoudrohrani() {
   )
 }
 
-// ❋ 003 — Naše hodnoty a přístup
-function Pristup() {
-  const hodnoty = [
-    {
-      cislo: '01',
-      nazev: 'Respekt',
-      popis: 'Nasloucháme dítěti. Nevnucujeme, netlačíme, nespěcháme. Každé dítě má právo na svůj čas a svůj způsob.',
-      detail: 'Pracujeme s emocemi — učíme děti pojmenovat pocity a řešit konflikty bez agrese. Bezpečný vztah je základ všeho.',
-    },
-    {
-      cislo: '02',
-      nazev: 'Adaptace',
-      popis: 'Pro většinu rodin je dětská skupina první zkušeností s hlídáním dětí mimo domov. Vnímáme velikost takového kroku pro všechny zúčastněné a maximálně vás podpoříme.',
-      detail: 'Přítomnost rodičů vítáme, aby mohla adaptace probíhat přirozeně. Tento krok nepodceňujeme.',
-    },
-    {
-      cislo: '03',
-      nazev: 'Komunita',
-      popis: 'Za bezmála 10 let fungování máme ověřeno, že také rodiče tvoří dětskou skupinu. Vždy vás vyslechneme, vítáme vaše nápady a sami přicházíme s vlastními.',
-      detail: 'Jednáme otevřeně, proaktivně a sdílíme s vámi, co vaše dítě během dne zažívá, co ho baví a co potřebuje.',
-    },
-  ]
-
-  return (
-    <section id="pristup" style={{
-      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
-      background: C.sand,
-    }}>
-      <div style={{maxWidth: 1320, margin: '0 auto'}}>
-        <div style={{marginBottom: 'clamp(48px,5vw,64px)'}}>
-          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Naše hodnoty a přístup</div>
-          <h2 style={{
-            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
-            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0, maxWidth: 520,
-          }}>
-            Na čem<br/>
-            <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>nám záleží.</span>
-          </h2>
-        </div>
-
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(340px,100%),1fr))',
-          gap: 'clamp(20px,2.5vw,32px)',
-        }}>
-          {hodnoty.map(({cislo, nazev, popis, detail}) => (
-            <div key={cislo} style={{
-              background: C.white, borderRadius: 20,
-              padding: 'clamp(28px,3vw,44px)',
-            }}>
-              <div style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.2em',
-                color: C.orange, marginBottom: 20,
-              }}>{cislo}</div>
-              <div style={{
-                fontSize: 'clamp(26px,2.4vw,44px)', fontWeight: 900,
-                color: C.ink, letterSpacing: '-0.03em', marginBottom: 18, lineHeight: 1.1,
-              }}>{nazev}</div>
-              <p style={{
-                fontSize: 'clamp(17px,1.3vw,19px)', color: C.ink, lineHeight: 1.75,
-                marginBottom: 16, fontWeight: 500,
-              }}>{popis}</p>
-              <p style={{
-                fontSize: 'clamp(15px,1.1vw,16px)', color: C.muted, lineHeight: 1.75,
-                margin: 0, paddingTop: 16,
-                borderTop: `1px solid ${C.ink}10`,
-              }}>{detail}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ❋ 004 — Jak to u nás funguje
-function JakFungujeme() {
-  const fakta = [
-    {num: '12', label: 'dětí maximálně', sub: 'Malá skupinka umožňuje skutečně osobní přístup.'},
-    {num: '4', label: 'pečující osoby', sub: 'Na každé 3 děti připadá jeden člověk z týmu.'},
-    {num: 'každý\nden', label: 'pobyt venku', sub: 'Les, hřiště, zahrada — za každého počasí.'},
-    {num: '100%', label: 'přírodní materiály', sub: 'Hračky, pomůcky i čisticí prostředky volíme s rozvahou.'},
-  ]
-
-  return (
-    <section id="jak-fungujeme" style={{
-      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
-      background: C.white,
-    }}>
-      <div style={{maxWidth: 1320, margin: '0 auto'}}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
-          gap: 'clamp(48px,6vw,80px)', alignItems: 'start',
-        }}>
-          <div>
-            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Jak to u nás funguje</div>
-            <h2 style={{
-              fontSize: 'clamp(34px,4vw,64px)', fontWeight: 900,
-              color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
-            }}>
-              Malá skupinka dává čas<br/>
-              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>poznat každé dítě.</span>
-            </h2>
-            <p style={{
-              fontSize: 'clamp(17px,1.5vw,22px)', color: C.muted,
-              lineHeight: 1.8, marginBottom: 24,
-            }}>
-              V Moudrohraní pečují o skupinu maximálně 12 dětí čtyři zkušené pečující
-              osoby. Díky tomu máme dostatek času poznat každé dítě a přizpůsobit
-              péči jeho tempu.
-            </p>
-            <p style={{
-              fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
-              lineHeight: 1.8, marginBottom: 40,
-            }}>
-              Používáme kvalitní vzdělávací pomůcky, preferujeme přírodní materiály
-              a vytváříme prostředí, které podporuje samostatnost, zvídavost i radost
-              z objevování. Děti vedeme k ohleduplnosti vůči přírodě i okolnímu světu.
-              Strava je pestrá a vyvážená: vždy s úctou k tomu, co dítě potřebuje.
-            </p>
-            <a href="#kontakt" style={{
-              display: 'inline-flex', alignItems: 'center',
-              padding: '15px 30px', borderRadius: 100,
-              background: C.orange, color: C.white,
-              fontSize: 14, fontWeight: 800,
-              textTransform: 'uppercase', letterSpacing: '0.1em',
-              textDecoration: 'none',
-              boxShadow: `0 4px 20px ${C.orange}33`,
-            }}>Přijďte se podívat →</a>
-          </div>
-
-          <div style={{
-            display: 'grid', gridTemplateColumns: '1fr 1fr',
-            gap: 'clamp(14px,1.8vw,22px)',
-          }}>
-            {fakta.map(({num, label, sub}) => (
-              <div key={label} style={{
-                background: C.sand, borderRadius: 16,
-                padding: 'clamp(20px,2vw,32px)',
-              }}>
-                <div style={{
-                  fontSize: 'clamp(32px,3vw,53px)', fontWeight: 900,
-                  color: C.orange, letterSpacing: '-0.03em',
-                  lineHeight: 1.1, marginBottom: 8,
-                  whiteSpace: 'pre-line',
-                }}>{num}</div>
-                <div style={{fontSize: 'clamp(14px,1vw,15px)', fontWeight: 800, color: C.ink, marginBottom: 8, lineHeight: 1.3}}>{label}</div>
-                <p style={{fontSize: 'clamp(13px,0.9vw,14px)', color: C.muted, lineHeight: 1.6, margin: 0}}>{sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 // ❋ 005 — Co děti během dne zažívají (program jako druhá vrstva)
 function Program() {
   const aktivity = [
     {emoji: '🧘', title: 'Pohyb a jóga', text: 'Dechová a pohybová cvičení přizpůsobená nejmenším. Podporujeme koordinaci, vnímání vlastního těla, pozornost i schopnost zklidnit se.'},
     {emoji: '🎨', title: 'Výtvarné tvoření', text: 'Malujeme, stříháme, lepíme, modelujeme a zkoušíme různé materiály a techniky. Děti mají volnou ruku a prostor tvořit podle své fantazie. A někdy se u toho i pořádně zašpiníme.'},
     {emoji: '🎵', title: 'Hudba a rytmus', text: 'Zpívání, rytmické hry a pohyb na hudbu. Hudba přirozeně provází náš každodenní život.'},
-    {emoji: '💬', title: 'Rozvoj řeči', text: 'Povídáme si, vyprávíme a společně sdílíme, co nás během dne potká. Děti se přirozeně učí naslouchat, vyjadřovat se a komunikovat s ostatními.'},
+    {emoji: '💬', title: 'Rozvoj řeči', text: 'Povídáme si, vyprávíme a společně sdílíme, co nás během dne potká. Děti si přirozeně rozvíjejí schopnost naslouchat, vyjadřovat se a komunikovat s ostatními.'},
     {emoji: '🌍', title: 'Angličtina přirozeně', text: 'Angličtinu zařazujeme do našeho programu hravou a přirozenou formou. Děti se s ní seznamují prostřednictvím písniček, říkanek, her a dalších aktivit.'},
-    {emoji: '❤️', title: 'Vztahy a emoce', text: 'Učíme děti rozpoznávat a pojmenovávat emoce, vyjadřovat své potřeby a postupně zvládat běžné situace a konflikty. Podporujeme bezpečné a respektující vztahy mezi dětmi.'},
+    {emoji: '❤️', title: 'Vztahy a emoce', text: 'Pomáháme dětem rozpoznávat a pojmenovávat emoce, vyjadřovat své potřeby a postupně zvládat běžné situace a konflikty. Podporujeme bezpečné a respektující vztahy mezi dětmi.'},
   ]
 
   return (
@@ -405,19 +262,19 @@ function Program() {
   )
 }
 
-// ❋ 006 — Rozvrh (Praktické informace)
+// ❋ 006 — Náš rytmus
 function Rozvrh() {
   const activities = [
-    {time: '8:00 – 8:30',   label: 'Příchod dětí, volný program'},
-    {time: '8:30 – 9:00',   label: 'Přivítání v kroužku'},
-    {time: '9:00 – 9:45',   label: 'Řízený program — pohyb, tvoření, hudba, rozvoj řeči'},
-    {time: '9:45 – 10:15',  label: 'Svačina'},
-    {time: '10:15 – 12:00', label: 'Venku — hřiště, les, zahrada, pohybové aktivity'},
+    {time: '8:00 – 9:00',   label: 'Příchod dětí, volná hra a klidný start'},
+    {time: '9:00 – 9:45',   label: 'Přivítání v kroužku a společné aktivity'},
+    {time: '9:45 – 10:00',  label: 'Svačina'},
+    {time: '10:00 – 10:20', label: 'Tvoření a výtvarné aktivity'},
+    {time: '10:20 – 12:00', label: 'Pobyt venku – les, hřiště a pohybové aktivity'},
     {time: '12:00 – 12:30', label: 'Oběd'},
     {time: '12:30 – 13:00', label: 'Odchod dětí z dopoledního programu'},
-    {time: '13:00 – 15:00', label: 'Odpočinek, klidné aktivity'},
-    {time: '15:00 – 15:30', label: 'Odpolední svačina'},
-    {time: '15:30 – 16:00', label: 'Odchod domů'},
+    {time: '13:00 – 14:30', label: 'Odpočinek, spánek či klidné aktivity'},
+    {time: '14:30 – 15:00', label: 'Odpolední svačina'},
+    {time: '15:00 – 16:00', label: 'Volná hra a odchod dětí'},
   ]
   return (
     <section id="rozvrh" style={{
@@ -431,26 +288,21 @@ function Rozvrh() {
           gap: 'clamp(48px,6vw,80px)', alignItems: 'start',
         }}>
           <div>
-            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginBottom: 20}}>Praktické informace</div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginBottom: 20}}>Náš rytmus</div>
             <h2 style={{
               fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
               color: C.white, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
             }}>
-              Jak probíhá<br/>každý den?
+              Jak vypadá den<br/>v Moudrohraní.
             </h2>
-            <p style={{
-              fontSize: 'clamp(17px,1.6vw,22px)', color: 'rgba(255,255,255,0.8)',
-              lineHeight: 1.8, marginBottom: 20, maxWidth: 400,
-            }}>
-              Provoz od pondělí do pátku 8:00 – 16:00.
-            </p>
             <p style={{
               fontSize: 'clamp(16px,1.2vw,17px)', color: 'rgba(255,255,255,0.6)',
               lineHeight: 1.7, margin: '0 0 40px',
             }}>
-              Harmonogram je orientační – dny mají zaběhnutý rytmus, na který
-              jsou děti zvyklé a který přizpůsobujeme aktuální náladě
-              a potřebám dětí.
+              Děti mají rády, když vědí, co je čeká. Pravidelná struktura dne
+              jim dává pocit jistoty a pomáhá jim postupně se zapojovat do
+              společného fungování. Časový harmonogram je orientační —
+              přizpůsobujeme ho aktuální situaci a potřebám dětí.
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
@@ -501,7 +353,7 @@ function PrijdteSePodivat() {
         gap: 'clamp(40px,5vw,72px)', alignItems: 'center',
       }}>
         <div>
-          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Ukázkový program zdarma</div>
+          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Ukázkový program</div>
           <h2 style={{
             fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
             color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24,
@@ -518,16 +370,18 @@ function PrijdteSePodivat() {
             fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
             lineHeight: 1.8, marginBottom: 16,
           }}>
-            Rádi vás pozveme na ukázkový program zdarma, kterého se účastní děti
-            společně s rodiči. Budete mít možnost poznat naše prostředí, seznámit se
-            s pečujícími osobami a zjistit, zda je Moudrohraní tím pravým místem
-            právě pro vás a vaše dítě.
+            Rádi vás pozveme na ukázkový program, kterého se děti účastní společně
+            s rodiči. Můžete s námi strávit celé dopoledne během našeho provozu,
+            prohlédnout si naše prostředí, seznámit se s pečujícími osobami a zažít,
+            jak u nás probíhá program. Ukázkový program je pro vás zdarma a zcela
+            nezávazný.
           </p>
           <p style={{
             fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
             lineHeight: 1.8, marginBottom: 32,
           }}>
-            Kontaktujte nás a rádi vám sdělíme aktuální obsazenost i možnosti docházky.
+            Máte zájem přijít? Zavolejte nám nebo vyplňte kontaktní formulář
+            a my vám sdělíme možný termín návštěvy.
           </p>
           <a href="#kontakt" style={{
             display: 'inline-flex', alignItems: 'center',
@@ -552,17 +406,28 @@ function PrijdteSePodivat() {
           </p>
         </div>
         <div style={{
-          borderRadius: 20, overflow: 'hidden', aspectRatio: '4 / 3',
+          borderRadius: 20, background: C.white,
           boxShadow: `0 8px 32px ${C.ink}15`,
+          padding: 'clamp(32px,3.5vw,48px)',
+          display: 'flex', flexDirection: 'column',
+          alignItems: 'flex-start', justifyContent: 'center', gap: 20,
         }}>
-          <iframe
-            title="Moudrohraní na mapě"
-            src="https://www.google.com/maps?q=Na+P%C3%ADsk%C3%A1ch+1175%2F71,+Praha+6&output=embed"
-            width="100%" height="100%"
-            style={{border: 0, display: 'block'}}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          <div style={{fontSize: 34}}>📝</div>
+          <div style={{fontSize: 'clamp(20px,1.6vw,24px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em'}}>
+            Domluvte si termín návštěvy
+          </div>
+          <p style={{fontSize: 'clamp(15px,1.1vw,16px)', color: C.muted, lineHeight: 1.7, margin: 0}}>
+            Vyplňte krátký kontaktní formulář níže a my se vám ozveme s možným
+            termínem ukázkového programu.
+          </p>
+          <a href="#kontakt" style={{
+            display: 'inline-flex', alignItems: 'center',
+            padding: '14px 28px', borderRadius: 100,
+            border: `2px solid ${C.orange}`, color: C.orange,
+            fontSize: 14, fontWeight: 800,
+            textTransform: 'uppercase', letterSpacing: '0.1em',
+            textDecoration: 'none',
+          }}>Vyplnit formulář ↓</a>
         </div>
       </div>
     </section>
@@ -638,10 +503,10 @@ function Kontakt() {
 
           <div style={{display: 'flex', flexDirection: 'column', gap: 28}}>
             {[
+              {label: 'Organizace', val: 'Moudrohraní z.s., IČO 10799427'},
               {label: 'Email',   val: 'info@moudrohrani.cz',                       href: 'mailto:info@moudrohrani.cz'},
               {label: 'Telefon', val: '+420 777 009 121',                           href: 'tel:+420777009121'},
               {label: 'Adresa',  val: 'Na Pískách 1175/71, Praha 6 — Hanspaulka'},
-              {label: 'IČO',     val: '10799427'},
             ].map(({label, val, href}) => (
               <div key={label}>
                 <div style={{
@@ -721,9 +586,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <CitlivaAdaptace />
         <ProcMoudrohrani />
-        <Pristup />
-        <JakFungujeme />
         <Program />
         <Rozvrh />
         <Tym />
