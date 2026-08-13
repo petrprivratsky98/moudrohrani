@@ -53,6 +53,25 @@ function Avatar({name, photo, color}) {
   )
 }
 
+function MemberCard({name, fullName, role, color, photo}) {
+  return (
+    <div style={{
+      flex: '1 1 240px', maxWidth: 300,
+      display: 'flex', alignItems: 'center', gap: 20,
+      background: C.white,
+      borderRadius: 16,
+      padding: '20px 24px',
+      boxShadow: '0 1px 0 rgba(40,30,10,0.06)',
+    }}>
+      <Avatar name={fullName} photo={photo} color={color} />
+      <div>
+        <div style={{fontSize: 'clamp(16px,1.1vw,17px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em', marginBottom: 4}}>{name}</div>
+        <div style={{fontSize: 'clamp(13px,0.9vw,14px)', color: C.muted, fontWeight: 500}}>{role}</div>
+      </div>
+    </div>
+  )
+}
+
 export function Tym() {
   return (
     <section id="tym" style={{
@@ -63,8 +82,7 @@ export function Tym() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
-          gap: 'clamp(40px,5vw,72px)', alignItems: 'center',
-          marginBottom: 'clamp(48px,5vw,64px)',
+          gap: 'clamp(40px,5vw,72px)', alignItems: 'start',
         }}>
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Náš tým</div>
@@ -93,47 +111,11 @@ export function Tym() {
           </div>
 
           <div style={{
-            display: 'grid', gridTemplateColumns: '1fr 1fr',
-            gap: 'clamp(12px,1.5vw,16px)',
+            display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
+            gap: 'clamp(16px,2vw,20px)',
           }}>
-            {[
-              {name: 'Ema', photo: '/tym/ema.jpg'},
-              {name: 'Radka', photo: '/tym/radka.jpg'},
-              {name: 'Megan', photo: '/tym/megan.jpg'},
-              {name: 'Monika', photo: '/tym/monika.jpg'},
-            ].map(({name, photo}) => (
-              <div key={name} style={{
-                position: 'relative', aspectRatio: '1 / 1',
-                borderRadius: 20, overflow: 'hidden',
-                boxShadow: '0 8px 24px rgba(40,30,10,0.12)',
-              }}>
-                <Image src={photo} alt={name} fill sizes="(max-width: 700px) 50vw, 300px"
-                  style={{objectFit: 'cover', objectPosition: 'center top'}}/>
-              </div>
-            ))}
+            {members.map(m => <MemberCard key={m.name} {...m} />)}
           </div>
-        </div>
-
-        <div style={{
-          display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
-          gap: 'clamp(24px,3vw,40px)',
-        }}>
-          {members.map(({name, fullName, role, color, photo}) => (
-            <div key={name} style={{
-              flex: '1 1 260px', maxWidth: 340,
-              display: 'flex', alignItems: 'center', gap: 20,
-              background: C.white,
-              borderRadius: 16,
-              padding: '20px 24px',
-              boxShadow: '0 1px 0 rgba(40,30,10,0.06)',
-            }}>
-              <Avatar name={fullName} photo={photo} color={color} />
-              <div>
-                <div style={{fontSize: 'clamp(16px,1.1vw,17px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.01em', marginBottom: 4}}>{name}</div>
-                <div style={{fontSize: 'clamp(13px,0.9vw,14px)', color: C.muted, fontWeight: 500}}>{role}</div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
