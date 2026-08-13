@@ -96,6 +96,12 @@ function Hero() {
 
 // ❋ 002 — Citlivá adaptace
 function CitlivaAdaptace() {
+  const kroky = [
+    {icon: '🤝', title: 'Rodiče jsou vítáni', text: 'Při adaptaci mohou být s dítětem tak dlouho, jak potřebuje.'},
+    {icon: '💬', title: 'Zůstáváme v kontaktu', text: 'Pravidelně sdílíme, jak se dítěti daří a co právě potřebuje.'},
+    {icon: '🌱', title: 'Dítě roste s důvěrou', text: 'Postupně získává jistotu a samostatnost ve vlastním tempu.'},
+  ]
+
   return (
     <section id="citliva-adaptace" style={{
       padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
@@ -105,28 +111,52 @@ function CitlivaAdaptace() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
-          gap: 'clamp(40px,5vw,72px)', alignItems: 'end',
+          gap: 'clamp(40px,5vw,72px)', alignItems: 'center',
         }}>
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Citlivá adaptace</div>
             <h2 style={{
               fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
-              color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
+              color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24,
             }}>
               S rodiči fungujeme<br/>
               <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>jako jeden tým.</span>
             </h2>
+            <p style={{
+              fontSize: 'clamp(17px,1.5vw,22px)', color: C.muted,
+              lineHeight: 1.8, margin: 0,
+            }}>
+              První odloučení je velkým krokem pro dítě i rodiče. V Moudrohraní dáváme
+              dětem bezpečí, čas a prostor, aby si na nové prostředí postupně zvykly.
+              Adaptaci tvoříme společně s rodiči a zůstáváme s nimi v pravidelném
+              kontaktu.
+            </p>
           </div>
-          <p style={{
-            fontSize: 'clamp(17px,1.5vw,22px)', color: C.muted,
-            lineHeight: 1.8, margin: 0,
+
+          <div style={{
+            background: C.cream, borderRadius: 24,
+            padding: 'clamp(32px,3.5vw,44px)',
           }}>
-            První odloučení je velkým krokem pro dítě i rodiče. V Moudrohraní dáváme
-            dětem bezpečí, čas a prostor, aby si na nové prostředí postupně zvykly.
-            Adaptaci tvoříme společně s rodiči a zůstáváme s nimi v pravidelném
-            kontaktu. Nasloucháme, sdílíme a společně hledáme, co jejich dítě
-            právě potřebuje.
-          </p>
+            {kroky.map(({icon, title, text}, i) => (
+              <div key={title} style={{display: 'flex', gap: 20}}>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0}}>
+                  <div style={{
+                    width: 44, height: 44, borderRadius: '50%',
+                    background: C.orange, color: C.white,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 19, flexShrink: 0,
+                  }}>{icon}</div>
+                  {i < kroky.length - 1 && (
+                    <div style={{width: 2, flex: 1, background: `${C.orange}30`, margin: '6px 0'}}/>
+                  )}
+                </div>
+                <div style={{paddingBottom: i < kroky.length - 1 ? 28 : 0}}>
+                  <div style={{fontSize: 17, fontWeight: 800, color: C.ink, marginBottom: 4, letterSpacing: '-0.01em'}}>{title}</div>
+                  <p style={{fontSize: 14.5, color: C.muted, lineHeight: 1.6, margin: 0}}>{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -242,7 +272,7 @@ function Program() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px,100%),1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(340px,100%),1fr))',
           gap: 2,
         }}>
           {aktivity.map(({emoji, title, text}, i) => (
@@ -304,7 +334,7 @@ function Rozvrh() {
               společného fungování. Časový harmonogram je orientační,
               přizpůsobujeme ho aktuální situaci a potřebám dětí.
             </p>
-            <a href="#kontakt" style={{
+            <a href="#prijdte-se-podivat" style={{
               display: 'inline-flex', alignItems: 'center',
               padding: '16px 32px', borderRadius: 100,
               background: C.white, color: C.orange,
@@ -351,7 +381,7 @@ function PrijdteSePodivat() {
         maxWidth: 1320, margin: '0 auto',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
-        gap: 'clamp(40px,5vw,72px)', alignItems: 'center',
+        gap: 'clamp(40px,5vw,72px)', alignItems: 'stretch',
       }}>
         <div>
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Ukázkový program</div>
@@ -386,7 +416,7 @@ function PrijdteSePodivat() {
           </p>
         </div>
 
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 24}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', height: '100%'}}>
           <div style={{
             width: '100%',
             borderRadius: 20, overflow: 'hidden', aspectRatio: '4 / 3',
@@ -409,7 +439,8 @@ function PrijdteSePodivat() {
             textTransform: 'uppercase', letterSpacing: '0.1em',
             textDecoration: 'none',
             boxShadow: `0 4px 20px ${C.orange}33`,
-          }}>Mám zájem ↓</a>
+            marginTop: 'auto',
+          }}>Přijdu se podívat ↓</a>
         </div>
       </div>
     </section>
@@ -457,7 +488,7 @@ function Kontakt() {
         maxWidth: 1320, margin: '0 auto',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px,100%),1fr))',
-        gap: 'clamp(48px,6vw,80px)',
+        gap: 'clamp(48px,6vw,80px)', alignItems: 'center',
       }}>
         <div>
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Kontakt</div>
@@ -469,19 +500,17 @@ function Kontakt() {
           </h2>
           <p style={{
             fontSize: 'clamp(16px,1.5vw,21px)', color: C.muted,
-            lineHeight: 1.8, marginBottom: 48, maxWidth: 420,
+            lineHeight: 1.8, marginBottom: 40, maxWidth: 420,
           }}>
             Máte další otázky nebo jste na webu nenašli, co hledáte? Napište
             nám nebo zavolejte. Rádi s vámi probereme vaši situaci, případné
             možnosti docházky a zodpovíme vše, co vás zajímá.
           </p>
 
-          <div style={{display: 'flex', flexDirection: 'column', gap: 28}}>
+          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, maxWidth: 420}}>
             {[
-              {label: 'Organizace', val: 'Moudrohraní z. s., IČO 10799427'},
               {label: 'Telefon', val: '+420 777 009 121',                           href: 'tel:+420777009121'},
               {label: 'Email',   val: 'info@moudrohrani.cz',                       href: 'mailto:info@moudrohrani.cz'},
-              {label: 'Adresa',  val: 'Na Pískách 1175/71, Praha 6, Hanspaulka'},
             ].map(({label, val, href}) => (
               <div key={label}>
                 <div style={{

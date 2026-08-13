@@ -60,32 +60,58 @@ export function Tym() {
       background: C.cream,
     }}>
       <div style={{maxWidth: 1320, margin: '0 auto'}}>
-        <div style={{marginBottom: 'clamp(48px,5vw,64px)'}}>
-          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Náš tým</div>
-          <h2 style={{
-            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
-            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
+          gap: 'clamp(40px,5vw,72px)', alignItems: 'center',
+          marginBottom: 'clamp(48px,5vw,64px)',
+        }}>
+          <div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Náš tým</div>
+            <h2 style={{
+              fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
+              color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
+            }}>
+              Pečující osoby,<br/>
+              <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>kterým věříme.</span>
+            </h2>
+            <p style={{
+              fontSize: 'clamp(16px,1.3vw,19px)', color: C.muted,
+              lineHeight: 1.8, marginBottom: 16,
+            }}>
+              Máme stabilní a sehraný tým lidí s potřebným vzděláním a zkušenostmi.
+              Nejdůležitější je pro nás ale jejich laskavý, empatický a respektující
+              přístup k dětem.
+            </p>
+            <p style={{
+              fontSize: 'clamp(16px,1.3vw,19px)', color: C.muted,
+              lineHeight: 1.8, margin: 0,
+            }}>
+              Na našem týmu nám záleží. Podporujeme pravidelné vzdělávání a dbáme
+              na to, aby měli naši lidé prostor pro odpočinek a psychohygienu.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid', gridTemplateColumns: '1fr 1fr',
+            gap: 'clamp(12px,1.5vw,16px)',
           }}>
-            Pečující osoby,<br/>
-            <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>kterým věříme.</span>
-          </h2>
-          <p style={{
-            fontSize: 'clamp(16px,1.3vw,19px)', color: C.muted,
-            lineHeight: 1.8, marginBottom: 16, maxWidth: 620,
-          }}>
-            Máme stabilní a sehraný tým lidí s potřebným vzděláním a zkušenostmi.
-            Nejdůležitější je pro nás ale jejich laskavý, empatický a respektující
-            přístup k dětem.
-          </p>
-          <p style={{
-            fontSize: 'clamp(16px,1.3vw,19px)', color: C.muted,
-            lineHeight: 1.8, margin: 0, maxWidth: 620,
-          }}>
-            Na našem týmu nám záleží. Podporujeme pravidelné vzdělávání a dbáme
-            na to, aby měli naši lidé prostor pro odpočinek a psychohygienu.
-            Věříme, že spokojený a vyrovnaný tým je důležitý pro to, aby se dětem
-            mohli věnovat s radostí, energií a láskou.
-          </p>
+            {[
+              {name: 'Ema', photo: '/tym/ema.jpg'},
+              {name: 'Radka', photo: '/tym/radka.jpg'},
+              {name: 'Megan', photo: '/tym/megan.jpg'},
+              {name: 'Monika', photo: '/tym/monika.jpg'},
+            ].map(({name, photo}) => (
+              <div key={name} style={{
+                position: 'relative', aspectRatio: '1 / 1',
+                borderRadius: 20, overflow: 'hidden',
+                boxShadow: '0 8px 24px rgba(40,30,10,0.12)',
+              }}>
+                <Image src={photo} alt={name} fill sizes="(max-width: 700px) 50vw, 300px"
+                  style={{objectFit: 'cover', objectPosition: 'center top'}}/>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div style={{

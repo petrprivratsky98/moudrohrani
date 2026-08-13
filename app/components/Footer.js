@@ -23,8 +23,8 @@ export function Footer() {
           </div>
           <div>
             <div style={{fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: `${C.white}33`, marginBottom: 16}}>Navigace</div>
-            {['Program', 'Tým', 'Kontakt'].map((l, i) => (
-              <a key={i} href={`#${['program','tym','kontakt'][i]}`} style={{
+            {['Citlivá adaptace', 'Proč Moudrohraní', 'Program', 'Náš rytmus', 'Tým', 'Přijďte se podívat', 'Kontakt'].map((l, i) => (
+              <a key={i} href={`#${['citliva-adaptace','proc-moudrohrani','program','rozvrh','tym','prijdte-se-podivat','kontakt'][i]}`} style={{
                 display: 'block', fontSize: 'clamp(14px,1vw,15px)', color: `${C.white}77`, textDecoration: 'none',
                 marginBottom: 10, fontWeight: 500,
               }}>{l}</a>
@@ -62,7 +62,7 @@ export function Footer() {
                 <Image src={src} alt={alt} width={20} height={20} style={{display: 'block'}} />
               </a>
             ))}
-            <span style={{fontSize: 12, color: `${C.white}22`}}>IČO: 10799427</span>
+            <span style={{fontSize: 12, color: `${C.white}22`}}>Moudrohraní z. s. · IČO 10799427</span>
           </div>
         </div>
       </div>
