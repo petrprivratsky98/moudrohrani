@@ -23,8 +23,8 @@ export function Footer() {
           </div>
           <div>
             <div style={{fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: `${C.white}33`, marginBottom: 16}}>Navigace</div>
-            {['O nás', 'Program', 'Rozvrh', 'Kontakt'].map((l, i) => (
-              <a key={i} href={`#${['proc-moudrohrani','program','rozvrh','kontakt'][i]}`} style={{
+            {['Program', 'Tým', 'Kontakt'].map((l, i) => (
+              <a key={i} href={`#${['program','tym','kontakt'][i]}`} style={{
                 display: 'block', fontSize: 'clamp(14px,1vw,15px)', color: `${C.white}77`, textDecoration: 'none',
                 marginBottom: 10, fontWeight: 500,
               }}>{l}</a>
@@ -34,8 +34,8 @@ export function Footer() {
             <div style={{fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: `${C.white}33`, marginBottom: 16}}>Kontakt</div>
             <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
               {[
-                {label: 'Email',   val: 'info@moudrohrani.cz',      href: 'mailto:info@moudrohrani.cz'},
                 {label: 'Telefon', val: '+420 777 009 121',          href: 'tel:+420777009121'},
+                {label: 'Email',   val: 'info@moudrohrani.cz',      href: 'mailto:info@moudrohrani.cz'},
                 {label: 'Adresa',  val: 'Na Pískách 1175/71, Praha 6'},
               ].map(({label, val, href}) => (
                 <div key={label}>

@@ -110,7 +110,7 @@ function CitlivaAdaptace() {
           <div>
             <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Citlivá adaptace</div>
             <h2 style={{
-              fontSize: 'clamp(34px,4vw,64px)', fontWeight: 900,
+              fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
               color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
             }}>
               S rodiči fungujeme<br/>
@@ -171,7 +171,7 @@ function ProcMoudrohrani() {
         <div style={{marginBottom: 'clamp(56px,6vw,80px)'}}>
           <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Proč Moudrohraní</div>
           <h2 style={{
-            fontSize: 'clamp(34px,4vw,64px)', fontWeight: 900,
+            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
             color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0,
           }}>
             Na čem<br/>
@@ -219,7 +219,7 @@ function Program() {
   return (
     <section id="program" style={{
       padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
-      background: C.sand,
+      background: C.white,
     }}>
       <div style={{maxWidth: 1320, margin: '0 auto'}}>
         <div style={{
@@ -227,7 +227,7 @@ function Program() {
           flexWrap: 'wrap', gap: 24, marginBottom: 'clamp(48px,5vw,64px)',
         }}>
           <div>
-            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Co děti během dne zažívají</div>
+            <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Co děti během dne zažívají</div>
             <h2 style={{fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900, color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, margin: 0}}>
               Hrajeme si, objevujeme,<br/>
               <span style={{fontWeight: 400, fontStyle: 'italic', color: C.muted}}>rosteme.</span>
@@ -245,9 +245,9 @@ function Program() {
           gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px,100%),1fr))',
           gap: 2,
         }}>
-          {aktivity.map(({emoji, title, text}) => (
+          {aktivity.map(({emoji, title, text}, i) => (
             <div key={title} style={{
-              background: C.white,
+              background: i % 2 === 0 ? C.cream : C.sand,
               padding: 'clamp(24px,2.5vw,36px)',
               display: 'flex', flexDirection: 'column', gap: 12,
             }}>
@@ -306,11 +306,12 @@ function Rozvrh() {
             </p>
             <a href="#kontakt" style={{
               display: 'inline-flex', alignItems: 'center',
-              padding: '15px 30px', borderRadius: 100,
+              padding: '16px 32px', borderRadius: 100,
               background: C.white, color: C.orange,
               fontSize: 14, fontWeight: 800,
               textTransform: 'uppercase', letterSpacing: '0.1em',
               textDecoration: 'none',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
             }}>Přijďte na návštěvu →</a>
           </div>
 
@@ -327,7 +328,7 @@ function Rozvrh() {
               }}>
                 <div style={{
                   fontSize: 'clamp(13px,0.9vw,14px)', fontWeight: 700, color: 'rgba(255,255,255,0.65)',
-                  minWidth: 104, paddingTop: 2, flexShrink: 0, letterSpacing: '0.02em',
+                  minWidth: 140, paddingTop: 2, flexShrink: 0, letterSpacing: '0.02em',
                 }}>{time}</div>
                 <div style={{fontSize: 'clamp(16px,1.1vw,17px)', color: C.white, lineHeight: 1.5}}>{label}</div>
               </div>
@@ -342,7 +343,7 @@ function Rozvrh() {
 // ❋ 007 — Přijďte se podívat
 function PrijdteSePodivat() {
   return (
-    <section style={{
+    <section id="prijdte-se-podivat" style={{
       padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
       background: C.sand,
     }}>

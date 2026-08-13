@@ -61,7 +61,7 @@ export function Tym() {
     }}>
       <div style={{maxWidth: 1320, margin: '0 auto'}}>
         <div style={{marginBottom: 'clamp(48px,5vw,64px)'}}>
-          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 16}}>Náš tým</div>
+          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Náš tým</div>
           <h2 style={{
             fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
             color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 28,
@@ -89,12 +89,12 @@ export function Tym() {
         </div>
 
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(260px,100%),1fr))',
+          display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
           gap: 'clamp(24px,3vw,40px)',
         }}>
           {members.map(({name, fullName, role, color, photo}) => (
             <div key={name} style={{
+              flex: '1 1 260px', maxWidth: 340,
               display: 'flex', alignItems: 'center', gap: 20,
               background: C.white,
               borderRadius: 16,
