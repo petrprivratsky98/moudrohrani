@@ -99,7 +99,7 @@ function CitlivaAdaptace() {
   const kroky = [
     {icon: '🤝', title: 'Rodiče jsou vítáni', text: 'Při adaptaci mohou být s dítětem tak dlouho, jak potřebuje.'},
     {icon: '💬', title: 'Zůstáváme v kontaktu', text: 'Pravidelně sdílíme, jak se dítěti daří a co právě potřebuje.'},
-    {icon: '🌱', title: 'Dítě roste s důvěrou', text: 'Postupně získává jistotu a samostatnost ve vlastním tempu.'},
+    {icon: '🌱', title: 'Dítě roste s důvěrou', text: 'Postupně získává jistotu a ve svém tempu si zvyká na nové prostředí.'},
   ]
 
   return (
