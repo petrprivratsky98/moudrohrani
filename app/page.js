@@ -416,7 +416,7 @@ function PrijdteSePodivat() {
           </p>
         </div>
 
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', height: '100%'}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', height: '100%', gap: 24}}>
           <div style={{
             width: '100%',
             borderRadius: 20, overflow: 'hidden', aspectRatio: '4 / 3',
