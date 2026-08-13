@@ -17,8 +17,11 @@ export function Footer() {
             <div style={{fontSize: 11, fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: `${C.white}44`, marginBottom: 16}}>
               Dětská skupina · Praha 6
             </div>
-            <p style={{fontSize: 'clamp(14px,1vw,15px)', color: `${C.white}66`, lineHeight: 1.7, margin: 0, maxWidth: 280}}>
+            <p style={{fontSize: 'clamp(14px,1vw,15px)', color: `${C.white}66`, lineHeight: 1.7, margin: '0 0 14px', maxWidth: 280}}>
               Respektující dětská skupina pro děti od 1,5 do 3 let v srdci pražské Hanspaulky.
+            </p>
+            <p style={{fontSize: 12, color: `${C.white}44`, margin: 0}}>
+              Moudrohraní z. s. · IČO 10799427
             </p>
           </div>
           <div>
@@ -62,7 +65,6 @@ export function Footer() {
                 <Image src={src} alt={alt} width={20} height={20} style={{display: 'block'}} />
               </a>
             ))}
-            <span style={{fontSize: 12, color: `${C.white}22`}}>Moudrohraní z. s. · IČO 10799427</span>
           </div>
         </div>
       </div>
