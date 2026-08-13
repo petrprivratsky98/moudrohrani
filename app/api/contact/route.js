@@ -22,7 +22,7 @@ export async function POST(req) {
       from: `"Moudrohraní web" <${process.env.SMTP_USER}>`,
       to: 'info@moudrohrani.cz',
       replyTo: email,
-      subject: `Zájem o místo — ${name}`,
+      subject: `Zájem o místo od ${name}`,
       text: `Jméno: ${name}\nEmail: ${email}\nVěk dítěte: ${age || 'neuvedeno'}\n\n${msg}`,
       html: `
         <p><strong>Jméno:</strong> ${name}</p>

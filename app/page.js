@@ -9,10 +9,10 @@ import {C} from './components/Colors'
 // ❋ 001 — Hero (Emoce)
 function Hero() {
   const stats = [
-    {num: '1,5 – 3 roky', label: 'věk dětí'},
+    {num: '1,5 až 3 roky', label: 'věk dětí'},
     {num: 'max. 12 dětí', label: 've skupině'},
     {num: '4 pečující', label: 'osoby'},
-    {num: 'Po – Pá', label: '8:00 – 16:00'},
+    {num: 'Po až Pá', label: '8:00 až 16:00'},
   ]
   return (
     <section style={{
@@ -39,7 +39,7 @@ function Hero() {
           <div style={{
             fontSize: 11, fontWeight: 700, letterSpacing: '0.22em',
             textTransform: 'uppercase', color: C.amber, marginBottom: 28,
-          }}>Praha 6 — Hanspaulka</div>
+          }}>Praha 6, Hanspaulka</div>
 
           <h1 style={{
             fontSize: 'clamp(42px,5.8vw,80px)', fontWeight: 900,
@@ -265,16 +265,16 @@ function Program() {
 // ❋ 006 — Náš rytmus
 function Rozvrh() {
   const activities = [
-    {time: '8:00 – 9:00',   label: 'Příchod dětí, volná hra a klidný start'},
-    {time: '9:00 – 9:45',   label: 'Přivítání v kroužku a společné aktivity'},
-    {time: '9:45 – 10:00',  label: 'Svačina'},
-    {time: '10:00 – 10:20', label: 'Tvoření a výtvarné aktivity'},
-    {time: '10:20 – 12:00', label: 'Pobyt venku – les, hřiště a pohybové aktivity'},
-    {time: '12:00 – 12:30', label: 'Oběd'},
-    {time: '12:30 – 13:00', label: 'Odchod dětí z dopoledního programu'},
-    {time: '13:00 – 14:30', label: 'Odpočinek, spánek či klidné aktivity'},
-    {time: '14:30 – 15:00', label: 'Odpolední svačina'},
-    {time: '15:00 – 16:00', label: 'Volná hra a odchod dětí'},
+    {time: '8:00 až 9:00',   label: 'Příchod dětí, volná hra a klidný start'},
+    {time: '9:00 až 9:45',   label: 'Přivítání v kroužku a společné aktivity'},
+    {time: '9:45 až 10:00',  label: 'Svačina'},
+    {time: '10:00 až 10:20', label: 'Tvoření a výtvarné aktivity'},
+    {time: '10:20 až 12:00', label: 'Pobyt venku, les, hřiště a pohybové aktivity'},
+    {time: '12:00 až 12:30', label: 'Oběd'},
+    {time: '12:30 až 13:00', label: 'Odchod dětí z dopoledního programu'},
+    {time: '13:00 až 14:30', label: 'Odpočinek, spánek či klidné aktivity'},
+    {time: '14:30 až 15:00', label: 'Odpolední svačina'},
+    {time: '15:00 až 16:00', label: 'Volná hra a odchod dětí'},
   ]
   return (
     <section id="rozvrh" style={{
@@ -301,7 +301,7 @@ function Rozvrh() {
             }}>
               Děti mají rády, když vědí, co je čeká. Pravidelná struktura dne
               jim dává pocit jistoty a pomáhá jim postupně se zapojovat do
-              společného fungování. Časový harmonogram je orientační —
+              společného fungování. Časový harmonogram je orientační,
               přizpůsobujeme ho aktuální situaci a potřebám dětí.
             </p>
             <a href="#kontakt" style={{
@@ -339,8 +339,84 @@ function Rozvrh() {
   )
 }
 
-// ❋ 007 — Přijďte se podívat (+ kontaktní formulář)
+// ❋ 007 — Přijďte se podívat
 function PrijdteSePodivat() {
+  return (
+    <section style={{
+      padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
+      background: C.sand,
+    }}>
+      <div style={{
+        maxWidth: 1320, margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
+        gap: 'clamp(40px,5vw,72px)', alignItems: 'center',
+      }}>
+        <div>
+          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Ukázkový program</div>
+          <h2 style={{
+            fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
+            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24,
+          }}>
+            Přijďte se podívat.
+          </h2>
+          <p style={{
+            fontSize: 'clamp(17px,1.5vw,22px)', color: C.ink,
+            lineHeight: 1.8, fontWeight: 600, marginBottom: 16,
+          }}>
+            Nejlepší způsob, jak poznat Moudrohraní, je zažít jeho atmosféru.
+          </p>
+          <p style={{
+            fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
+            lineHeight: 1.8, marginBottom: 16,
+          }}>
+            Rádi vás pozveme na ukázkový program, kterého se děti účastní společně
+            s rodiči. Můžete s námi strávit celé dopoledne během našeho provozu,
+            prohlédnout si naše prostředí, seznámit se s pečujícími osobami a zažít,
+            jak u nás probíhá program. Ukázkový program je pro vás zdarma a zcela
+            nezávazný.
+          </p>
+          <p style={{
+            fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
+            lineHeight: 1.8, margin: 0,
+          }}>
+            Máte zájem přijít? Napište nám, zavolejte nebo rovnou vyplňte
+            kontaktní formulář níže a my vám sdělíme možný termín návštěvy.
+          </p>
+        </div>
+
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 24}}>
+          <div style={{
+            width: '100%',
+            borderRadius: 20, overflow: 'hidden', aspectRatio: '4 / 3',
+            boxShadow: `0 8px 32px ${C.ink}15`,
+          }}>
+            <iframe
+              title="Moudrohraní na mapě"
+              src="https://www.google.com/maps?q=Na+P%C3%ADsk%C3%A1ch+1175%2F71,+Praha+6&output=embed"
+              width="100%" height="100%"
+              style={{border: 0, display: 'block'}}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <a href="#kontakt" style={{
+            display: 'inline-flex', alignItems: 'center',
+            padding: '16px 32px', borderRadius: 100,
+            background: C.orange, color: C.white,
+            fontSize: 14, fontWeight: 800,
+            textTransform: 'uppercase', letterSpacing: '0.1em',
+            textDecoration: 'none',
+            boxShadow: `0 4px 20px ${C.orange}33`,
+          }}>Mám zájem ↓</a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ❋ 008 — Kontakt
+function Kontakt() {
   const [form, setForm]   = useState({name: '', email: '', age: '', msg: ''})
   const [status, setStatus] = useState('idle')
 
@@ -374,106 +450,105 @@ function PrijdteSePodivat() {
   return (
     <section id="kontakt" style={{
       padding: 'clamp(80px,10vw,128px) clamp(24px,5vw,80px)',
-      background: C.sand,
+      background: C.white,
     }}>
       <div style={{
         maxWidth: 1320, margin: '0 auto',
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(460px,100%),1fr))',
-        gap: 'clamp(40px,5vw,72px)', alignItems: 'start',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px,100%),1fr))',
+        gap: 'clamp(48px,6vw,80px)',
       }}>
         <div>
-          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Ukázkový program</div>
+          <div style={{fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: C.orange, marginBottom: 20}}>Kontakt</div>
           <h2 style={{
             fontSize: 'clamp(32px,4vw,62px)', fontWeight: 900,
-            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24,
+            color: C.ink, letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 20,
           }}>
-            Přijďte se podívat.
+            Jsme tu pro vás.
           </h2>
           <p style={{
-            fontSize: 'clamp(17px,1.5vw,22px)', color: C.ink,
-            lineHeight: 1.8, fontWeight: 600, marginBottom: 16,
+            fontSize: 'clamp(16px,1.5vw,21px)', color: C.muted,
+            lineHeight: 1.8, marginBottom: 48, maxWidth: 420,
           }}>
-            Nejlepší způsob, jak poznat Moudrohraní, je zažít jeho atmosféru.
+            Máte další otázky nebo jste na webu nenašli, co hledáte? Napište
+            nám nebo zavolejte. Rádi s vámi probereme vaši situaci, případné
+            možnosti docházky a zodpovíme vše, co vás zajímá.
           </p>
-          <p style={{
-            fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
-            lineHeight: 1.8, marginBottom: 16,
-          }}>
-            Rádi vás pozveme na ukázkový program, kterého se děti účastní společně
-            s rodiči. Můžete s námi strávit celé dopoledne během našeho provozu,
-            prohlédnout si naše prostředí, seznámit se s pečujícími osobami a zažít,
-            jak u nás probíhá program. Ukázkový program je pro vás zdarma a zcela
-            nezávazný.
-          </p>
-          <p style={{
-            fontSize: 'clamp(16px,1.3vw,20px)', color: C.muted,
-            lineHeight: 1.8, margin: 0,
-          }}>
-            Máte zájem přijít? Vyplňte kontaktní formulář, zavolejte nám nebo
-            napište — a my vám sdělíme možný termín návštěvy.
-          </p>
+
+          <div style={{display: 'flex', flexDirection: 'column', gap: 28}}>
+            {[
+              {label: 'Organizace', val: 'Moudrohraní z. s., IČO 10799427'},
+              {label: 'Telefon', val: '+420 777 009 121',                           href: 'tel:+420777009121'},
+              {label: 'Email',   val: 'info@moudrohrani.cz',                       href: 'mailto:info@moudrohrani.cz'},
+              {label: 'Adresa',  val: 'Na Pískách 1175/71, Praha 6, Hanspaulka'},
+            ].map(({label, val, href}) => (
+              <div key={label}>
+                <div style={{
+                  fontSize: 11, fontWeight: 700, textTransform: 'uppercase',
+                  letterSpacing: '0.15em', color: C.muted, marginBottom: 5,
+                }}>{label}</div>
+                {href
+                  ? <a href={href} style={{fontSize: 'clamp(17px,1.1vw,18px)', color: C.ink, fontWeight: 600, textDecoration: 'none'}}>{val}</a>
+                  : <div style={{fontSize: 'clamp(17px,1.1vw,18px)', color: C.ink, fontWeight: 600}}>{val}</div>
+                }
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div style={{
-          background: C.white, borderRadius: 20,
-          padding: 'clamp(28px,3vw,44px)',
-          boxShadow: `0 8px 32px ${C.ink}15`,
-        }}>
-          {status === 'ok' ? (
-            <div style={{
-              display: 'flex', flexDirection: 'column',
-              alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 16,
-              padding: '32px 0',
-            }}>
-              <div style={{fontSize: 40}}>✓</div>
-              <h3 style={{fontSize: 'clamp(28px,2vw,30px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.02em', margin: 0}}>Zpráva odeslána.</h3>
-              <p style={{fontSize: 'clamp(18px,1.3vw,19px)', color: C.muted, lineHeight: 1.65, maxWidth: 300, margin: 0}}>Ozveme se vám co nejdříve, obvykle do pár dnů.</p>
+        {status === 'ok' ? (
+          <div style={{
+            background: C.sand, borderRadius: 20, padding: 56,
+            display: 'flex', flexDirection: 'column',
+            alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 16,
+          }}>
+            <div style={{fontSize: 40}}>✓</div>
+            <h3 style={{fontSize: 'clamp(28px,2vw,30px)', fontWeight: 800, color: C.ink, letterSpacing: '-0.02em', margin: 0}}>Zpráva odeslána.</h3>
+            <p style={{fontSize: 'clamp(18px,1.3vw,19px)', color: C.muted, lineHeight: 1.65, maxWidth: 300, margin: 0}}>Ozveme se vám co nejdříve, obvykle do pár dnů.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: 18}}>
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16}}>
+              <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
+                <label style={labelStyle}>Jméno</label>
+                <input type="text" required placeholder="Vaše jméno" value={form.name}
+                  onChange={e => setForm(f => ({...f, name: e.target.value}))} style={inputStyle}/>
+              </div>
+              <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
+                <label style={labelStyle}>Věk dítěte</label>
+                <input type="text" placeholder="Např. 2 roky" value={form.age}
+                  onChange={e => setForm(f => ({...f, age: e.target.value}))} style={inputStyle}/>
+              </div>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: 18}}>
-              <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16}}>
-                <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
-                  <label style={labelStyle}>Jméno</label>
-                  <input type="text" required placeholder="Vaše jméno" value={form.name}
-                    onChange={e => setForm(f => ({...f, name: e.target.value}))} style={inputStyle}/>
-                </div>
-                <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
-                  <label style={labelStyle}>Věk dítěte</label>
-                  <input type="text" placeholder="Např. 2 roky" value={form.age}
-                    onChange={e => setForm(f => ({...f, age: e.target.value}))} style={inputStyle}/>
-                </div>
-              </div>
-              <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
-                <label style={labelStyle}>Email</label>
-                <input type="email" required placeholder="vas@email.cz" value={form.email}
-                  onChange={e => setForm(f => ({...f, email: e.target.value}))} style={inputStyle}/>
-              </div>
-              <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
-                <label style={labelStyle}>Zpráva</label>
-                <textarea required rows={5} value={form.msg}
-                  placeholder="Zájem o místo, otázky, ukázkový program..."
-                  onChange={e => setForm(f => ({...f, msg: e.target.value}))}
-                  style={{...inputStyle, resize: 'vertical'}}/>
-              </div>
-              {status === 'err' && (
-                <p style={{fontSize: 14, color: '#c0392b', margin: 0}}>
-                  Odeslání se nezdařilo. Zkuste to znovu nebo napište přímo na info@moudrohrani.cz
-                </p>
-              )}
-              <button type="submit" disabled={status === 'sending'} style={{
-                padding: '16px 32px', borderRadius: 100, border: 'none',
-                background: C.orange, color: C.white,
-                fontSize: 14, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em',
-                cursor: status === 'sending' ? 'default' : 'pointer',
-                opacity: status === 'sending' ? 0.7 : 1,
-                boxShadow: `0 4px 20px ${C.orange}33`,
-              }}>
-                {status === 'sending' ? 'Odesílám...' : 'Odeslat zprávu →'}
-              </button>
-            </form>
-          )}
-        </div>
+            <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
+              <label style={labelStyle}>Email</label>
+              <input type="email" required placeholder="vas@email.cz" value={form.email}
+                onChange={e => setForm(f => ({...f, email: e.target.value}))} style={inputStyle}/>
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
+              <label style={labelStyle}>Zpráva</label>
+              <textarea required rows={5} value={form.msg}
+                placeholder="Zájem o místo, otázky, ukázkový program..."
+                onChange={e => setForm(f => ({...f, msg: e.target.value}))}
+                style={{...inputStyle, resize: 'vertical'}}/>
+            </div>
+            {status === 'err' && (
+              <p style={{fontSize: 14, color: '#c0392b', margin: 0}}>
+                Odeslání se nezdařilo. Zkuste to znovu nebo napište přímo na info@moudrohrani.cz
+              </p>
+            )}
+            <button type="submit" disabled={status === 'sending'} style={{
+              padding: '16px 32px', borderRadius: 100, border: 'none',
+              background: C.orange, color: C.white,
+              fontSize: 14, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em',
+              cursor: status === 'sending' ? 'default' : 'pointer',
+              opacity: status === 'sending' ? 0.7 : 1,
+              boxShadow: `0 4px 20px ${C.orange}33`,
+            }}>
+              {status === 'sending' ? 'Odesílám...' : 'Odeslat zprávu →'}
+            </button>
+          </form>
+        )}
       </div>
     </section>
   )
@@ -491,6 +566,7 @@ export default function Home() {
         <Rozvrh />
         <Tym />
         <PrijdteSePodivat />
+        <Kontakt />
       </main>
       <Footer />
     </>
